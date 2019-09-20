@@ -1,0 +1,50 @@
+.place {
+    padding: 0 0 3em;
+
+    .service__content {
+        @include counter(station);
+    }
+
+    &__action {
+        margin-top: 1.3em;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        &__content {
+            margin: 0 -1.25em;
+        }
+
+        .service {
+            &__content {}
+
+            &__item {}
+
+            &__plate {
+                padding: 0;
+            }
+
+            &__img {}
+
+            &__name {}
+
+            &__text {
+                padding: 0 1.5em 2.5em;
+                font-size: 1.3em;
+
+                ul {
+                    display: none;
+                }
+            }
+
+            &__adress {}
+        }
+
+        .slick-arrow {
+            top: 6.6em;
+            margin: -0.6em;
+        }
+
+        .slick-next {}
+    }
+}

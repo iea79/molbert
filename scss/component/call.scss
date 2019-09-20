@@ -1,0 +1,36 @@
+.call {
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.024em;
+    color: $color_withe;
+    text-decoration: none;
+    margin-bottom: 0.2em;
+    display: block;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0.1em;
+        font-size: 1.188em;
+    }
+
+    &__action {
+        color: #dfc297;
+        font-family: Geometria;
+        font-size: 1.2em;
+        font-weight: 500;
+        line-height: 1.4;
+        // Text style for "Перезвонит"
+        letter-spacing: 0.019em;
+        border-bottom: 0.065em dotted;
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.3s;
+
+        @media (min-width: 768px) {
+            font-size: 0.938em;
+        }
+
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+}

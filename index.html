@@ -1,39 +1,789 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-  <header class="header">
-    <div class="header__content">
-      <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="alt"/></a></div>
-      <nav class="header__right">
-        <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 0</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 1</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 2</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 3</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="#">Page 4</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="main_content">
-    <div class="container_center">
-      <div class="grid">
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!</div>
-        <div class="grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css?2.1"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.png" alt="Мольберт"/></a>
+          <div class="logo__text">Ресторан выездного обслуживания</div>
+        </div>
+        <div class="header__center">Кейтеринг <br>в Москве и МО</div>
+        <div class="header__right"><a class="call" href="tel:+7(495) 565-37-31">+7(495) 565-37-31</a>
+          <div class="call__action" data-toggle="modal" data-target="#callBack">Перезвонить вам?</div>
+        </div>
+      </div>
+    </header>
+    <main class="main_content">
+      <!-- begin fScreen-->
+      <section class="fScreen" id="fScreen">
+        <div class="container_center">
+          <div class="fScreen__content">
+            <div class="fScreen__left">
+              <h1 class="fScreen__title">Организуем фуршеты, коференции, банкеты <span>премиум-класса </span>масштабом от 10 до 5000 человек</h1>
+              <div class="fScreen__sub">Получите расчет 3-х вариантов меню под ваш бюджет </div>
+              <div class="fScreen__action">
+                <button class="btn" type="button" data-toggle="modal" data-target="#getMenu">Получить расчет меню</button>
+                <div class="fScreen__actionText">Будет у вас на почте <span>уже через 2 часа</span></div>
+                <div class="fScreen__actionImg">
+                  <picture>
+                    <source srcset="img/fScreen_action.png" media="(min-width: 768px)"/><img src="img/fScreen_action.png" alt="alt"/>
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="fScreen__right">
+              <div class="fScreen__list">
+                <div class="fScreen__listItem">
+                  <div class="fScreen__listImg"><img src="img/fList1.png" alt="alt"/></div>
+                  <div class="fScreen__listText"><b>Более 20 </b>анимационных гастро-станций</div>
+                </div>
+                <div class="fScreen__listItem">
+                  <div class="fScreen__listImg"><img src="img/fList2.png" alt="alt"/></div>
+                  <div class="fScreen__listText"><b>Кулинарные </b>мастер-классы и <b>шоу программы</b></div>
+                </div>
+                <div class="fScreen__listItem">
+                  <div class="fScreen__listImg"><img src="img/fList3.png" alt="alt"/></div>
+                  <div class="fScreen__listText"><b>Дизайнерский </b>декор и аксессуары</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end fScreen-->
+      <!-- begin service-->
+      <section class="section service" id="service">
+        <div class="container_center">
+          <h2 class="section__title section__title_center">Детально продумаем концепцию вашего торжества и приготовим <span>вкусные, оригинальные блюда </span></h2>
+          <div class="section__sub section__sub_center">Получите расчет 3-х вариантов меню под ваш бюджет </div>
+          <div class="service__content">
+            <div class="service__item">
+              <div class="service__plate">
+                <div class="service__img"><img src="img/service1.png" alt="alt"/></div>
+                <div class="service__name">Банкеты</div>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__plate">
+                <div class="service__img"><img src="img/service2.png" alt="alt"/></div>
+                <div class="service__name">Фуршеты</div>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__plate">
+                <div class="service__img"><img src="img/service3.png" alt="alt"/></div>
+                <div class="service__name">Гала-ужины</div>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__plate">
+                <div class="service__img"><img src="img/service4.png" alt="alt"/></div>
+                <div class="service__name">Свадебные торжества</div>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__plate">
+                <div class="service__img"><img src="img/service5.png" alt="alt"/></div>
+                <div class="service__name">Барбекю на природе</div>
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__plate">
+                <div class="service__img"><img src="img/service6.png" alt="alt"/></div>
+                <div class="service__name">Кофе-брейки</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end service-->
+      <!-- begin twoHour-->
+      <section class="section twoHour" id="twoHour">
+        <div class="container_center">
+          <div class="twoHour__content"><img class="twoHour__bg" src="img/twoHour.png" alt="Меню"/>
+            <div class="twoHour__left">
+              <h2 class="section__title">Заполните форму и получите готовое коммерческое предложение <br/><span>уже через 2 часа </span></h2>
+              <div class="section__sub">3 варианта меню под ваш бюджет </div>
+              <div class="twoHour__comment">
+                <div class="twoHour__commentIcon"><img src="img/comment.png" alt=""/></div>
+                <div class="twoHour__commentContent">После утверждения меню мы сможем назначить встречу <span>для бесплатной дегустации</span></div>
+              </div>
+            </div>
+            <div class="twoHour__right">
+              <form class="form" action="#" method="method">
+                <input type="hidden" name="subject" value="3 варианта меню"/>
+                <div class="form__title">Заполните форму</div>
+                <div class="form__row">
+                  <div class="form__label">На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?</div>
+                  <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+                </div>
+                <div class="form__row">
+                  <div class="form__label">Куда выслать готовый расчет?</div>
+                  <input type="email" name="email" placeholder="mail@mail.ru" required="required"/>
+                </div>
+                <div class="form__row">
+                  <button class="btn" type="submit">Получить расчет меню</button>
+                </div>
+                <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="/">Политикой конфиденциальности</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end twoHour-->
+      <div class="darkWrap">
+        <!-- begin wow-->
+        <section class="section wow" id="wow">
+          <div class="container_center">
+            <h2 class="section__title"> <span>Сервировка, </span>которая вызывает WOW-эффект и удивляет даже самых искушенных</h2>
+            <div class="section__sub">Предложим вам десятки способов, чтобы превратить подачу блюд <span>в </span><span>арт-объект</span>
+              <div class="wow__info">
+                <div class="wow__infoContent">
+                  <div class="wow__infoIcon"><img src="img/information.png" alt=""/></div>
+                  <div class="wow__infoText">Например, используем вертикальные стенды, где можно разместить салаты в индивидуальной упаковке, пончики, напитки и т. п</div>
+                </div>
+              </div>
+            </div>
+            <div class="wow__list">
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/wow1.png" alt="Необычные подвесные конструкции"/></div>
+                <div class="wow__listText">Необычные подвесные конструкции</div>
+              </div>
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/wow2.png" alt="Эко-стиль"/></div>
+                <div class="wow__listText">Эко-стиль</div>
+              </div>
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/wow3.png" alt="Donut Wall"/></div>
+                <div class="wow__listText">Donut Wall</div>
+              </div>
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/wow4.png" alt="Shampagne Wall"/></div>
+                <div class="wow__listText">Shampagne Wall</div>
+              </div>
+              <div class="wow__listBage"><img src="img/instagram-logo.png" alt=""/><span>Гости будут <br/>активно делиться<br/>фото с вашего<br/>ивента в<br/>соцсетях!</span></div>
+            </div>
+          </div>
+        </section>
+        <!-- end wow-->
+        <!-- begin show-->
+        <section class="section show" id="show">
+          <div class="show__content">
+            <h2 class="section__title"><span>Кулинарные </span>шоу-программы</h2>
+            <div class="section__sub">Гости готовят еду вместе с поваром</div>
+          </div>
+        </section>
+        <!-- end show-->
+        <!-- begin molecular-->
+        <section class="section molecular" id="molecular">
+          <div class="container_center">
+            <div class="molecular__content">
+              <div class="molecular__left">
+                <h2 class="section__title"> <span>Молекулярная кухня, </span>где используются инструменты из научных лабораторий </h2>
+                <div class="section__sub">Последние технические новинки <br>и безопасные пищевые добавки позволяют нам создать <span>блюда удивительного вкуса, </span>которые <span>невозможно приготовить </span>в домашних условиях</div>
+              </div>
+              <div class="molecular__right">
+                <div class="molecularMeals__item">
+                  <div class="molecularMeals__img"><img src="img/molecul1.png" alt=""/></div>
+                  <div class="molecularMeals__text">Апельсиновые спагетти</div>
+                </div>
+                <div class="molecularMeals__item">
+                  <div class="molecularMeals__img"><img src="img/molecul2.png" alt=""/></div>
+                  <div class="molecularMeals__text">Твердый мохито</div>
+                </div>
+                <div class="molecularMeals__item">
+                  <div class="molecularMeals__img"><img src="img/molecul3.png" alt=""/></div>
+                  <div class="molecularMeals__text">Вишня из фуагра</div>
+                </div>
+              </div>
+            </div>
+            <div class="molecular__listTitle">Блюда могут подаваться в разных форматах:</div>
+            <div class="service__content">
+              <div class="service__item">
+                <div class="service__plate">
+                  <div class="service__img"><img src="img/molecular1.png" alt="alt"/></div>
+                  <div class="service__name">Анимационная гастро-станция</div>
+                </div>
+              </div>
+              <div class="service__item">
+                <div class="service__plate">
+                  <div class="service__img"><img src="img/molecular2.png" alt="alt"/></div>
+                  <div class="service__name">Мастер-класс с участием гостей</div>
+                </div>
+              </div>
+              <div class="service__item">
+                <div class="service__plate">
+                  <div class="service__img"><img src="img/molecular3.png" alt="alt"/></div>
+                  <div class="service__name">Фуршетная линия закусок</div>
+                </div>
+              </div>
+            </div>
+            <div class="molecular__action">
+              <button class="btn" type="button" data-toggle="modal" data-target="#getMenuMolecular">Рассчитать стоимость молекулярного меню</button>
+            </div>
+          </div>
+        </section>
+        <!-- end molecular-->
+      </div>
+      <!-- begin station-->
+      <section class="section station" id="station">
+        <div class="container_center">
+          <h2 class="section__title section__title_center"> <span>Более 20 анимационных гастро-станций, </span>на которых повара демонстрируют <br/>свое мастерство</h2>
+          <div class="section__sub section__sub_center">Анимационные станции всегда вызывают интерес и желание попробовать блюдо, которое было приготовлено здесь и сейчас</div>
+          <div class="station__content">
+            <div class="wow__list">
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/station1.png" alt="Бургерная станция"/></div>
+                <div class="wow__listText">Бургерная станция</div>
+              </div>
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/station2.png" alt="Вафли из Гонконга"/></div>
+                <div class="wow__listText">Вафли из Гонконга</div>
+              </div>
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/station3.png" alt="Станция морских ежей"/></div>
+                <div class="wow__listText">Станция морских ежей</div>
+              </div>
+              <div class="wow__listItem">
+                <div class="wow__listImg"><img src="img/station4.png" alt="Хамон станция"/></div>
+                <div class="wow__listText">Хамон станция</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end station-->
+      <!-- begin place-->
+      <section class="section place" id="place">
+        <div class="container_center">
+          <h2 class="section__title section__title_center"><span>Поможем подобрать место, </span>идеально подходщее под формат вашего мероприятия</h2>
+          <div class="section__sub section__sub_center">Сотрудничаем с лучшими площадками Москвы</div>
+          <div class="place__content">
+            <div class="service__content">
+              <div class="service__item">
+                <div class="service__plate">
+                  <div class="service__img"><img src="img/place1.png" alt=""/></div>
+                  <div class="service__name">ЦДП</div>
+                  <div class="service__text">
+                    <div class="service__adress"><b>Адрес: </b>г.&nbsp;Москва, ул.&nbsp;Покровка, <br/>д.&nbsp;47</div>
+                    <p>Современные и полностью оснащенные залы, профессиональный и оперативный менеджмент позволят сэкономить ваши ресурсы и время</p>
+                    <ul>
+                      <li>Большой зал и Малый зал </li>
+                      <li>Фойе</li>
+                      <li>Аудитории и Лектории </li>
+                      <li>Видеоповерхности</li>
+                      <li>Медиафасад (при согласовании контента) </li>
+                      <li>Звуковое и световое оборудование </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="service__item">
+                <div class="service__plate">
+                  <div class="service__img"><img src="img/place2.png" alt=""/></div>
+                  <div class="service__name">ДАНИЛОВСКИЙ EVENT HALL</div>
+                  <div class="service__text">
+                    <div class="service__adress"><b>Адрес: </b>г.&nbsp;Москва, ул.&nbsp;Дубининская, д.71, стр.5</div>
+                    <p>Светлый, современный интерьер с легкими акцентами актуальной классики создает уютное и очень гармоничное пространство.</p>
+                    <p>Оригинальное дизайнерское решение притягивает внимание и делает атмосферу зала не только комфортной, но и поистине волшебной</p>
+                  </div>
+                </div>
+              </div>
+              <div class="service__item">
+                <div class="service__plate">
+                  <div class="service__img"><img src="img/place3.png" alt=""/></div>
+                  <div class="service__name">Digital LOFT</div>
+                  <div class="service__text">
+                    <div class="service__adress"><b>Адрес: </b>г.&nbsp;Москва, ул.&nbsp;Большая Почтовая, д.&nbsp;20с1</div>
+                    <p>2 этажа 800 метрового лофта, с изолированными друг от друга входными группами, внутри образуют единое пространство, соединенное широкой лестницей и просторными холлами</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="place__action">
+            <button class="btn" type="button" data-toggle="modal" data-target="#getPlace">Получить полный каталог площадок</button>
+          </div>
+        </div>
+      </section>
+      <!-- end place-->
+      <!-- begin catering-->
+      <section class="section catering" id="catering">
+        <div class="container_center">
+          <div class="catering__top">
+            <div class="catering__left"><img src="img/director.png" alt="alt"/>
+              <div class="catering__name">Александр Смирнов</div>
+              <div class="catering__prof">Генеральный директор «Мольберт» кейтеринг</div>
+            </div>
+            <div class="catering__right">
+              <h2 class="section__title">Кейтеринг <span>«Мольберт»</span></h2>
+              <ul class="catering__list">
+                <li>С 2018 года провели более 100 мероприятий и обслужили около 30 000 гостей</li>
+                <li>40 сотрудников в штате и более 500 на субподряде</li>
+              </ul>
+              <div class="catering__descr">«Наш подход — относиться предельно внимательно ко всем деталям в оформлении, декоре, сервировке, подаче. Мы продумываем каждый элемент, чтобы у вас получился идеальный праздник»</div>
+            </div>
+          </div>
+          <form class="form catering__form">
+            <input type="hidden" name="subject" value="Перезвоните мне (блок Генеральный директор)"/>
+            <div class="form__title">Мы готовы проконсультировать вас по любому вопросу</div>
+            <div class="form__sub">Оставьте заявку, и мы перезвоним вам уже через 15 минут в рабочее время</div>
+            <div class="form__row">
+              <div class="form__col">
+                <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+              </div>
+              <div class="form__col">
+                <button class="btn" type="submit">Перезвоните мне</button>
+              </div>
+            </div>
+            <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="#">Политикой конфиденциальности</a></div><img class="catering__img" src="img/plan.png" alt=""/>
+          </form>
+        </div>
+      </section>
+      <!-- end catering-->
+      <!-- begin menuPosition-->
+      <section class="section menuPosition" id="menuPosition">
+        <div class="container_center">
+          <div class="menuPosition__content">
+            <div class="menuPosition__left"><img class="menuPosition__paper" src="img/paperShading.png" alt=""/>
+              <div class="twoHour__comment">
+                <div class="twoHour__commentIcon"><img src="img/smile.png" alt=""/></div>
+                <div class="twoHour__commentContent">Мы поможем подобрать блюда под ваши пожелания либо вы <span>можете довериться </span>нашим профессионалам и <span>попробовать что-то совсем новое ;) </span></div>
+              </div>
+            </div>
+            <div class="menuPosition__right">
+              <h2 class="section__title"> <span>Более 2000 позиций в меню, </span>идеально подходящих под формат кейтеринга</h2>
+              <div class="section__sub">Наше меню регулярно расширяется и включает в себя все кухни мира и последние модные тренды</div>
+              <div class="menuPosition__descr">Если у вас есть фирменное блюдо, мы с радостью его приготовим для ваших гостей или вместе с ними<img src="img/menuPositionEx.png" alt="фирменное блюдо"/></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end menuPosition-->
+      <!-- begin servicing-->
+      <section class="section servicing" id="servicing">
+        <div class="container_center">
+          <h2 class="section__title section__title_center">Наши ресурсы <br>обеспечивают высококлассное <span>ресторанное обслуживание</span></h2>
+          <div class="servicing__content">
+            <div class="servicing__item">
+              <div class="servicing__img"><img src="img/servicing1.png" alt=""/></div>
+              <div class="servicing__descr">
+                <div class="servicing__name">Производство площадью 700 кв.м.,</div>
+                <div class="servicing__text">которое справится с мероприятием любого масштаба и сложности</div>
+              </div>
+            </div>
+            <div class="servicing__item">
+              <div class="servicing__img"><img src="img/servicing2.png" alt=""/></div>
+              <div class="servicing__descr">
+                <div class="servicing__name">Собственная служба логистики</div>
+                <div class="servicing__text">Не зависим от подрядчиков, которые могут подвести</div>
+              </div>
+            </div>
+            <div class="servicing__item">
+              <div class="servicing__img"><img src="img/servicing3.png" alt=""/></div>
+              <div class="servicing__descr">
+                <div class="servicing__name">Большой склад оборудования</div>
+                <div class="servicing__text">Вам не придется переплачивать за аренду мебели</div>
+              </div>
+            </div>
+            <div class="servicing__item">
+              <div class="servicing__img"><img src="img/servicing4.png" alt=""/></div>
+              <div class="servicing__descr">
+                <div class="servicing__name">Штатный технолог, который </div>
+                <div class="servicing__text">контролирует качество приготовления и соответствие нормам</div>
+              </div>
+            </div>
+            <div class="servicing__item">
+              <div class="servicing__img"><img src="img/servicing5.png" alt=""/></div>
+              <div class="servicing__descr">
+                <div class="servicing__name">Фермерские продукты</div>
+                <div class="servicing__text">Поставки только от проверенных поставщиков</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end servicing-->
+      <!-- begin chef-->
+      <!-- section.section.chef#chef
+      .container_center
+          .chef__content
+              .chef__left
+                  h2.section__title Шеф-повар, которому доверяют мероприятия 
+                      span государственного уровня
+                  ul.chef__list
+                      li.chef__listItem Организация питания для VIP-персон на саммите АТЭС во Владивостоке (400 человек)
+                      li.chef__listItem Организация питания президентской ложи на открытии Олимпийских игр в Сочи (240 человек)
+                      li.chef__listItem Неоднократная помощь в организации мероприятий для двухсторонних встреч глав государств в Сочи, Санкт-Петербурге и Москве
+                      li.chef__listItem Совместная работа с известными итальянскими и французскими  шеф-поварами: Мирко Калдино, Карло Греку, Николас Отт
+                      li.chef__listItem Опыт в организации питания на мероприятиях численностью до 5000 человек
+                      li.chef__listItem Обучение техникам молекулярной кухни в Европе
+                      li.chef__listItem Организация мероприятий для министров и губернаторов
+              .chef__right
+                  img(src="img/chef.jpg", alt="Сергей Еремин")
+                  .catering__name Сергей Еремин
+                  .catering__prof Шеф-повар «Мольберт» кейтеринг
+      
+      -->
+      <!-- end chef-->
+      <div class="darkenWrap">
+        <!-- begin fullServ-->
+        <section class="section fullServ" id="fullServ">
+          <div class="container_center">
+            <h2 class="section__title section__title_center">Сделаем так, что <span>ваше торжество пройдет идеально </span>от начала до конца</h2>
+            <div class="fullServ__content">
+              <div class="fullServ__item">
+                <div class="fullServ__count"><img src="img/01.png" alt=""/></div>
+                <div class="fullServ__wrap">
+                  <div class="fullServ__text"><b>Персональный менеджер, </b>который всегда на связи, чтобы ответить на вопрос или срочно скорректировать заказ</div>
+                </div>
+              </div>
+              <div class="fullServ__item">
+                <div class="fullServ__count"><img src="img/02.png" alt=""/></div>
+                <div class="fullServ__wrap">
+                  <div class="fullServ__text"><b>Точный тайминг подачи блюд,</b>за которым ваш менеджер будет следить лично</div>
+                </div>
+              </div>
+              <div class="fullServ__item">
+                <div class="fullServ__count"><img src="img/03.png" alt=""/></div>
+                <div class="fullServ__wrap">
+                  <div class="fullServ__text"><b>Лучшие площадки Москвы,</b>подобранные специально  под формат вашего мероприятия и численность гостей</div>
+                </div>
+              </div>
+            </div>
+            <div class="fullServ__form">
+              <div class="fullServ__left">
+                <div class="fullServ__title">Оставьте заявку,</div>
+                <div class="fullServ__sub">чтобы обсудить свои пожелания <br>с нашим менеджером и получить расчет 3 вариантов меню под ваш бюджет</div>
+                <div class="twoHour__comment">
+                  <div class="twoHour__commentIcon"><img src="img/star.png" alt=""/></div>
+                  <div class="twoHour__commentContent">Пришлем на вашу почту <span>уже через 2 часа</span></div>
+                </div><img class="fullServ__img" src="img/fullServMenu.png" alt=""/>
+              </div>
+              <div class="fullServ__right">
+                <form class="form">
+                  <input type="hidden" name="subject" value="Получить расчет меню (блок ваше торжество пройдет идеально)"/>
+                  <div class="form__row">
+                    <div class="form__label">На какой номер вам перезвонить?</div>
+                    <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label">Куда выслать готовый расчет?</div>
+                    <input type="email" name="email" placeholder="mail@mail.ru" required="required"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn" type="submit">Получить расчет меню</button>
+                  </div>
+                  <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="/">Политикой конфиденциальности</a></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end fullServ-->
+        <!-- begin uniform-->
+        <section class="section uniform" id="uniform">
+          <div class="container_center">
+            <h2 class="section__title section__title_center">Униформа официантов <span>безупречно </span>подойдет формату мероприятия </h2>
+            <div class="section__sub section__sub_center">Предлагаем на выбор 5 вариантов униформ персонала:</div>
+            <div class="uniform__content">
+              <div class="uniform__item">
+                <div class="uniform__text">Каждый сотрудник регулярно проходит <b>специальную аттестацию</b></div>
+              </div>
+              <div class="uniform__item">
+                <div class="uniform__text">Для международных событий приглашаем <b>персонал со знанием иностранных языков</b></div>
+              </div>
+              <div class="uniform__item">
+                <div class="uniform__text">Все официанты и бармены имеют <b>опыт работы на масштабных мероприятиях</b></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end uniform-->
+      </div>
+    </main>
+    <!-- begin estimate-->
+    <section class="section estimate" id="estimate">
+      <div class="container_center">
+        <div class="estimate__content">
+          <div class="estimate__left">
+            <h2 class="section__title"><span>Точно рассчитаем смету, </span>чтобы гости были довольны, а бюджет использован рационально</h2>
+            <div class="estimate__listTitle">В стоимость входят: </div>
+            <ul class="estimate__list">
+              <li class="estimate__listItem">разработка индивидуального меню и концепции</li>
+              <li class="estimate__listItem">продукты, посуда, оборудование, аксессуары</li>
+              <li class="estimate__listItem">приготовление, сервировка, обслуживание и уборка</li>
+              <li class="estimate__listItem">печать меню на бланках</li>
+              <li class="estimate__listItem">организация именной рассадки</li>
+              <li class="estimate__listItem">доставка еды и оборудования</li>
+            </ul>
+            <div class="estimate__other">
+              <div class="estimate__otherTitle">Дополнительно можно заказать:</div>
+              <ul class="estimate__otherList">
+                <li class="estimate__otherItem">Артистов шоу-бизнеса</li>
+                <li class="estimate__otherItem">Артистов шоу-программ</li>
+                <li class="estimate__otherItem">Бармен-шоу</li>
+                <li class="estimate__otherItem">Флористическое оформление</li>
+                <li class="estimate__otherItem">Световое и музыкальное оборудование</li>
+              </ul>
+            </div>
+          </div>
+          <div class="estimate__right">
+            <div class="estimate__info">
+              <div class="estimate__infoItem">
+                <div class="estimate__infoImg"><img src="img/estimate1.png" alt=""/></div>
+                <div class="estimate__infoText"><b>Прозрачные сметы</b>без скрытых сборов, доплат, комиссий</div>
+              </div>
+              <div class="estimate__infoItem">
+                <div class="estimate__infoImg"><img src="img/estimate2.png" alt=""/></div>
+                <div class="estimate__infoText"><b>Бонусы</b>для постоянных клиентов</div>
+              </div>
+              <div class="estimate__infoItem">
+                <div class="estimate__infoImg"><img src="img/estimate3.png" alt=""/></div>
+                <div class="estimate__infoText"><b>Нет «пробкового сбора»</b>Вы можете закупить свой алкоголь</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="estimate__slider">
+          <div class="estimate__sliderItem" style="background-image: url('img/estimateSlide1.jpg')">
+            <div class="estimate__sliderDescr"><b>Банкет</b>Частное мероприятие <br>260 персон</div>
+          </div>
+          <div class="estimate__sliderItem" style="background-image: url('img/estimateSlide1.jpg')">
+            <div class="estimate__sliderDescr"><b>Фуршет </b>Компания «Мегафон» <br>260 персон</div>
+          </div>
+          <div class="estimate__sliderItem" style="background-image: url('img/estimateSlide1.jpg')">
+            <div class="estimate__sliderDescr"><b>Фуршет </b>Компания «Бест Новострой» <br>260 персон</div>
+          </div>
+        </div>
+        <div class="estimate__thumps">
+          <div class="estimate__thumpsItem">
+            <div class="estimate__thumpsImg" style="background-image: url('img/estimateSlide1.jpg')"></div>
+            <div class="estimate__thumpsName"> <span>Банкет </span>Частное мероприятие
+              <div class="estimate__thumpsName_hide">260 персон</div>
+            </div>
+          </div>
+          <div class="estimate__thumpsItem">
+            <div class="estimate__thumpsImg" style="background-image: url('img/estimateThumps2.jpg')"></div>
+            <div class="estimate__thumpsName"><span>Фуршет </span>Компания «Мегафон»
+              <div class="estimate__thumpsName_hide">260 персон</div>
+            </div>
+          </div>
+          <div class="estimate__thumpsItem">
+            <div class="estimate__thumpsImg" style="background-image: url('img/estimateThumps3.jpg')"></div>
+            <div class="estimate__thumpsName"><span>Фуршет </span>Компания «Бест Новострой»
+              <div class="estimate__thumpsName_hide">260 персон</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end estimate-->
+    <!-- begin getOrder-->
+    <section class="section getOrder" id="getOrder">
+      <div class="container_center">
+        <div class="getOrder__content">
+          <div class="getOrder__left">
+            <h2 class="section__title">Оставьте заявку и получите готовое коммерческое предложение <span>уже через 2 часа </span></h2>
+            <div class="getOrder__steps">
+              <div class="getOrder__item">
+                <div class="getOrder__img"><img src="img/getOrder1.png" alt=""/></div>
+                <div class="getOrder__text">
+                  <div class="getOrder__btn">Шаг 1.</div>Вы получаете детальное коммерческое предложение с расчетом 3-х индивидуальных вариантов меню
+                </div>
+              </div>
+              <div class="getOrder__item">
+                <div class="getOrder__text">
+                  <div class="getOrder__btn">Шаг 2.</div>После утверждения меню назначаем встречу для бесплатной дегустации
+                </div>
+                <div class="getOrder__img"><img src="img/getOrder2.png" alt=""/></div>
+              </div>
+            </div>
+          </div>
+          <div class="getOrder__right">
+            <form class="form" action="#" method="method">
+              <input type="hidden" name="subject" value="Получить коммерческое предложение (последний блок)"/>
+              <div class="form__title">Заполните форму</div>
+              <div class="form__row">
+                <div class="form__label">На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?</div>
+                <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Куда выслать готовый расчет?</div>
+                <input type="email" name="email" placeholder="mail@mail.ru" required="required"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Получить расчет меню</button>
+              </div>
+              <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="/">Политикой конфиденциальности</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end getOrder-->
+    <footer class="footer">
+      <div class="container_center">
+        <div class="footer__top">
+          <div class="footer__info">
+            <div class="footer__infoItem">
+              <div class="footer__infoIcon"><img src="img/mail.png" alt=""/></div><a class="footer__infoDescr" href="mailto: zakaz@molbert-banket.ru">zakaz@molbert-banket.ru</a>
+            </div>
+            <div class="footer__infoItem">
+              <div class="footer__infoIcon"><img src="img/clock.png" alt=""/></div>
+              <div class="footer__infoDescr">пн-сб с 09:00 до 18:00</div>
+            </div>
+            <div class="footer__infoItem">
+              <div class="footer__infoIcon"><img src="img/marker.png" alt=""/></div>
+              <div class="footer__infoDescr">г. Москва, 115088, ул. 2-я Машиностроения д.23</div>
+            </div>
+            <div class="footer__infoItem">
+              <div class="footer__infoIcon"><img src="img/insta.png" alt=""/></div><a class="footer__infoDescr" href="">@molbert.banket</a>
+            </div>
+          </div>
+          <div class="footer__contact"><a class="call" href="tel:+7(495) 565-37-31">+7(495) 565-37-31</a>
+            <div class="call__action" data-toggle="modal" data-target="#callBack">Перезвонить вам?</div>
+          </div>
+        </div>
+        <div class="footer__bottom"><a class="footer__privacy" href="#">Политика конфиденциальности</a>
+          <div class="footer__dev">Создание сайта — <a href="#">«Время Первых»</a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal callBack-->
+    <div class="modal fade callBack" id="callBack">
+      <div class="modal-dialog modal-dialog--sm">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-body"> 
+            <form class="form" action="#" method="method">
+              <input type="hidden" name="subject" value="Перезвонить вам (блок с телефоном в шапке или подвале сайта)"/>
+              <div class="form__title">Заполните форму</div>
+              <div class="form__row">
+                <div class="form__label">На какой номер вам перезвонить?</div>
+                <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Заказать звонок</button>
+              </div>
+              <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="/">Политикой конфиденциальности</a></div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
-  <footer class="footer">
-    <div class="container_center">
-      <p></p>&copy; 2016 |<i class="fa fa-github" aria-hidden="true">&nbsp;</i><a href="#">View Source</a>
+    <!-- End modal callBack-->
+    <!-- Begin Modal getMenu-->
+    <div class="modal fade getMenu" id="getMenu">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-body">
+            <div class="getMenu__content">
+              <div class="getMenu__left">
+                <div class="section__title">Заполните форму <br/>и получите готовое коммерческое предложение <span>уже через 2 часа </span></div>
+                <div class="section__sub">3 варианта меню под ваш бюджет </div>
+                <div class="twoHour__comment">
+                  <div class="twoHour__commentIcon"><img src="img/comment.png" alt=""/></div>
+                  <div class="twoHour__commentContent">После утверждения меню мы сможем назначить встречу <span>для бесплатной дегустации</span></div>
+                </div>
+              </div>
+              <div class="getMenu__right">
+                <form class="form" action="#" method="method">
+                  <input type="hidden" name="subject" value="Получить расчет меню"/>
+                  <div class="form__title">Заполните форму</div>
+                  <div class="form__row">
+                    <div class="form__label">На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?</div>
+                    <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label">Куда выслать готовый расчет?</div>
+                    <input type="email" name="email" placeholder="mail@mail.ru" required="required"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn" type="submit">Получить расчет меню</button>
+                  </div>
+                  <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="/">Политикой конфиденциальности</a></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-</body>
+    <!-- End modal getMenu-->
+    <!-- Begin Modal getMenu-->
+    <div class="modal fade getMenu" id="getMenuMolecular">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-body">
+            <div class="getMenu__content">
+              <div class="getMenu__left">
+                <div class="section__title">Заполните форму <br/>и получите готовое коммерческое предложение <span>уже через 2 часа </span></div>
+                <div class="section__sub">3 варианта меню под ваш бюджет </div>
+                <div class="twoHour__comment">
+                  <div class="twoHour__commentIcon"><img src="img/comment.png" alt=""/></div>
+                  <div class="twoHour__commentContent">После утверждения меню мы сможем назначить встречу <span>для бесплатной дегустации</span></div>
+                </div>
+              </div>
+              <div class="getMenu__right">
+                <form class="form" action="#" method="method">
+                  <input type="hidden" name="subject" value="Получить расчет молекулярного меню"/>
+                  <div class="form__title">Заполните форму</div>
+                  <div class="form__row">
+                    <div class="form__label">На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?</div>
+                    <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__label">Куда выслать готовый расчет?</div>
+                    <input type="email" name="email" placeholder="mail@mail.ru" required="required"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn" type="submit">Получить расчет меню</button>
+                  </div>
+                  <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="/">Политикой конфиденциальности</a></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal getMenu-->
+    <!-- Begin Modal getPlace-->
+    <div class="modal fade callBack" id="getPlace">
+      <div class="modal-dialog modal-dialog--sm">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-body"> 
+            <form class="form" action="#" method="method">
+              <input type="hidden" name="subject" value="Получить каталог площадок"/>
+              <div class="form__title">Заполните форму</div>
+              <div class="form__row">
+                <div class="form__label">На какой номер вам перезвонить, чтобы уточнить детали мероприятия?</div>
+                <input type="tel" name="tel" placeholder="+7(___)___-__-__" required="required"/>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Куда выслать каталог площадок?</div>
+                <input type="email" name="email" placeholder="mail@mail.ru" required="required"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Получить каталог площадок</button>
+              </div>
+              <div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="/">Политикой конфиденциальности</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal getPlace-->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/function.js?2.1"></script>
+  </body>
+</html>

@@ -1,17 +1,80 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	background-color: #ccc;
-	padding: 10px 0;
-	@extend %clear_a;
+	// background-color: #ccc;
+	// @extend %clear_a;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: $color_withe;
+	flex: none;
+	overflow: hidden;
+	@media (max-width: 767px) {
+		z-index: 30;
+	}
 
 	&__content {
 		max-width: $container_width;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding: 1em;
 		margin: auto;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
+
+		@media (min-width: 768px) {}
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		@media (max-width: 767px) {
+			// justify-content: center;
+			flex-direction: column;
+		}
+	}
+
+	&__center {
+		font-size: 0.938em;
+		font-weight: 500;
+		line-height: 1.6;
+		// Text style for "Кейтеринг"
+		letter-spacing: 0.019em;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__right {}
+}
+
+.logo {
+	text-decoration: none;
+	width: 10.375em;
+
+	@media (min-width: 768px) {
+		margin-right: 2em;
+	}
+
+	&__text {
+		max-width: 13em;
+		color: #dfc297;
+		line-height: 1.5;
+		font-size: 1.14em;
+
+		@media (min-width: 768px) {
+			font-size: 0.875em;
+		}
+
+		@media (max-width: 767px) {
+			margin: 0.8em 0 1.2em;
+		}
 	}
 }
 

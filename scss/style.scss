@@ -5,9 +5,9 @@
  * Skype: ivanov_ea
  *
  */
+
+@import 'core/fonts'; // Fonts
 @import 'mixins/mixin'; // Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900); // Mixin for include fonts
-@include font-face("ArialMT", 'fonts/CenturyGothic', normal, normal);
 // Import files
 @import 'variables/variables';
 @import 'core/reset';
@@ -22,3 +22,358 @@
 @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
+
+@import "vendor/slick/slick";
+@import "vendor/modal";
+
+@mixin counter($countName) {
+    counter-reset: $countName;
+
+    .service__plate {
+        &:before {
+            content: '0' counter($countName);
+            counter-increment: $countName;
+        }
+    }
+
+}
+
+@import "component/call";
+@import "component/fScreen";
+@import "component/section";
+@import "component/service";
+@import "component/twoHour";
+@import "component/darkWrap";
+@import "component/wow";
+@import "component/show";
+@import "component/molecular";
+@import "component/station";
+@import "component/place";
+@import "component/catering";
+@import "component/menuPosition";
+@import "component/servicing";
+@import "component/chef";
+@import "component/darkenWrap";
+@import "component/fullServ";
+@import "component/uniform";
+@import "component/estimate";
+@import "component/getOrder";
+
+@media (max-width: 767px) {
+    * {
+        // border: 1px solid #000;
+        // border: 1px solid tranparent;
+
+        &:after,
+        &:before {
+            // border: 1px solid tranparent;
+            // content: '';
+            // border: 1px solid #000;
+        }
+
+        &:before {}
+
+        &:after {}
+    }
+}
+
+.wrapper {
+    @media (max-width: 767px) {
+        overflow-x: hidden;
+        height: auto;
+        min-height: 100%;
+    }
+}
+
+.slick {
+    &-slide {
+        outline: 0;
+    }
+
+    &-list {}
+
+    &-current {}
+
+    &-arrow {
+        position: absolute;
+        border: none;
+        width: 3em;
+        height: 3em;
+        background-color: #f2f2f2;
+        top: 50%;
+        margin: -1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        @media (min-width: 768px) {
+            width: 3.8em;
+            height: 3.8em;
+            margin: -1.9em;
+        }
+
+        &:hover {
+            background-color: #fedd69;
+        }
+
+        &:before {
+            content: '';
+            width: 0.563em;
+            height: 1.063em;
+            background: url("../img/next.png") 0 0 no-repeat / 100%;
+            position: relative;
+        }
+
+    }
+
+    &-next {
+        right: 0.6em;
+
+        @media (min-width: 768px) {
+            right: 0;
+        }
+
+        &:before {
+            right: -0.1em;
+        }
+    }
+
+    &-prev {
+        left: 0.6em;
+        transform: rotate(180deg);
+
+        @media (min-width: 768px) {
+            left: 0;
+        }
+
+        &:before {
+            left: 0.1em;
+        }
+    }
+
+    &-dots {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.3em 0 0.6em;
+        padding: 0;
+        width: 100%;
+
+        button {
+            display: none;
+        }
+
+        li {
+            width: 0.5em;
+            height: 0.5em;
+            background-color: #efefef;
+            border-radius: 50%;
+            margin: 0.3em;
+
+            &.slick-active {
+                background-color: #fcdb68;
+            }
+        }
+    }
+}
+
+.callBack {
+    .form {
+        background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+        position: relative;
+        padding: 4.1em 3.7em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0.7em;
+            top: 0.7em;
+            bottom: 0.7em;
+            left: 0.7em;
+            box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
+            z-index: -1;
+        }
+
+        &__label {
+            padding: 0;
+        }
+
+        .btn {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+    }
+}
+
+.getMenu {
+    .section {
+        &__title {
+            font-size: 1.9em;
+            line-height: 1.3;
+        }
+
+        &__sub {
+            font-size: 1.2em;
+        }
+    }
+
+    .modal-dialog {
+        @media (min-width: 768px) {
+            max-width: 60.5em;
+            background: url("../img/getMenubg.jpg") 0 0 no-repeat / 100% 100%;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            padding: 3em 1.6em 3em 3em;
+        }
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            flex: none;
+            width: 50%;
+            margin-right: 1.1%;
+        }
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__right {}
+
+    .form {
+
+        background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+        position: relative;
+        margin-top: -1.3em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0.7em;
+            top: 0.7em;
+            bottom: 0.7em;
+            left: 0.7em;
+            box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
+            z-index: -1;
+        }
+    }
+
+    .twoHour__comment {
+        margin-left: 0;
+        margin-top: 4em;
+    }
+}
+
+.success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../img/successbg.jpg") center no-repeat / cover;
+
+    @media (max-width: 767px) {
+        padding: 2em 0;
+    }
+
+    .section {
+        &__title {
+            color: #1c1c1c;
+            letter-spacing: 0.031em;
+            font-size: 1.48em;
+            margin: 0.3em 0 1.2em;
+        }
+
+        &__sub {
+            color: #565656;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 1.5em;
+        }
+
+    }
+
+    &__content {
+        background: url("../img/successbox.png") center no-repeat / 100% 100%;
+        box-shadow: 0 1.875em 3.625em 1.313em rgba(40, 40, 40, 0.23), 0 0 7.063em 1.25em rgba(255, 255, 255, 0.1);
+        padding: 2.8em 2.6em 3.3em;
+        border-radius: 0.5em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            padding: 3.8em 3.8em 4.3em 5.5em;
+        }
+    }
+
+    &__left {
+        flex: none;
+        @media (min-width: 768px) {
+            width: 50.4%;
+            margin-right: 7.9%;
+        }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2.7em;
+
+        @media (min-width: 768px) {
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 3.75em;
+                height: 6.438em;
+                opacity: 0.57;
+                background: url("../img/successLine.png") 0 0 no-repeat / 100% 100%;
+                position: absolute;
+                left: -2.3em;
+                top: -3.5em;
+                z-index: 0;
+            }
+        }
+    }
+
+    &__right {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__img {}
+
+    .btn {
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            margin-right: 2em;
+            position: relative;
+        }
+    }
+
+    .insta {
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .container_center {
+        max-width: 56.6em;
+
+        @media (max-width: 767px) {
+            padding: 1.5em;
+        }
+    }
+}

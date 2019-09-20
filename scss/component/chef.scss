@@ -1,0 +1,134 @@
+.chef {
+    @media (max-width: 767px) {
+        overflow: hidden;
+    }
+
+    .section {
+        &__title {
+            @media (max-width: 767px) {
+                font-size: 2em;
+            }
+        }
+
+        &__sub {}
+
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__left {
+        padding-top: 0.7em;
+        @media (min-width: 768px) {
+            flex: none;
+            width: 60%;
+            padding-top: 4.3em;
+
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        @media (max-width: 767px) {
+            overflow: hidden;
+            margin: 0 -1.5em;
+        }
+
+        img {
+            max-width: none;
+            position: relative;
+            right: 1em;
+            display: block;
+            width: 30.2em;
+
+            @media (min-width: 768px) {
+                width: 38.9em;
+                right: 4em;
+
+            }
+        }
+
+        .catering__name {
+            right: 9.3em;
+            bottom: 7.5em;
+
+            @media (max-width: 767px) {
+                font-size: 1.2em;
+                width: 11.2em;
+            }
+
+            @media (min-width: 768px) {
+                right: 14.8em;
+                bottom: 9.2em;
+
+            }
+        }
+
+        .catering__prof {
+            right: 3.7em;
+            bottom: 3.6em;
+            @media (max-width: 767px) {
+                font-size: 1.2em;
+                padding: 0.8em 1.4em;
+            }
+            @media (min-width: 768px) {
+                right: 11em;
+                bottom: 6.7em;
+            }
+        }
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color: #393939;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+        font-size: 1.05em;
+        // display: flex;
+        // flex-wrap: wrap;
+        // margin-left: -2em;
+
+        @media (min-width: 768px) {
+            padding: 0.6em 0;
+            line-height: 1.88;
+            font-size: 1em;
+            columns: 2 21em;
+            column-gap: 3em;
+            width: 46em;
+        }
+
+        &Item {
+            // width: 50%;
+            // padding-left: 2.1em;
+            // display: flex;
+            position: relative;
+            z-index: 3;
+            padding-left: 1.8em;
+            margin-bottom: 0.5em;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 0.5em;
+                height: 0.5em;
+                border: 0.125em solid #c5ac86;
+                border-radius: 50%;
+                left: 0;
+                top: 0.5em;
+            }
+
+            @media (max-width: 767px) {
+                &:nth-child(n+4) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

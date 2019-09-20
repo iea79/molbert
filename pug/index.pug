@@ -1,40 +1,773 @@
+block variables
+    -var version = "2.1";
 <!DOCTYPE html>
 html(lang="en")
-head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
 
-    link(rel="stylesheet", type="text/css", href="css/style.css")
-body
-    header.header
-        .header__content
-            .header__left
-                a.logo(href="/")
-                    img(src="img/logo.png", alt="alt")
-            nav.header__right
-                ul.navbar
-                    - var n = 0;
-                    -for (i=0; i<5; i++) {
-                        li.navbar__item
-                            a.navbar__link(href="#") Page #{i}
-                    -};
-                    //- while n < 6
-                    //-     li.navbar__item
-                    //-         a.navbar__link(href="#")= "Page " + n++
+        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
+    body
+        header.header
+            .header__content
+                .header__left
+                    a.logo(href="/")
+                        img(src="img/logo.png", alt="Мольберт")
+                    .logo__text Ресторан выездного обслуживания
+                .header__center Кейтеринг <br>в Москве и МО
+                .header__right
+                    a.call(href="tel:+7(495) 565-37-31") +7(495) 565-37-31
+                    .call__action(data-toggle="modal" data-target="#callBack") Перезвонить вам?
 
-    main.main_content
-        .container_center
+        main.main_content
 
-            .grid
-                .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.
-                .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!
-                .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?
+            // begin fScreen
+            section#fScreen.fScreen
+                .container_center
+                    .fScreen__content
+                        .fScreen__left
+                            h1.fScreen__title Организуем фуршеты, коференции, банкеты 
+                                span премиум-класса 
+                                |масштабом от 10 до 5000 человек
+                            .fScreen__sub Получите расчет 3-х вариантов меню под ваш бюджет 
+                            .fScreen__action
+                                button.btn(type="button" data-toggle="modal" data-target="#getMenu") Получить расчет меню
+                                .fScreen__actionText Будет у вас на почте 
+                                    span уже через 2 часа
+                                .fScreen__actionImg
+                                    picture
+                                        source(srcset="img/fScreen_action.png" media="(min-width: 768px)")
+                                        img(src="img/fScreen_action.png" alt="alt")
+                        .fScreen__right
+                            .fScreen__list
+                                .fScreen__listItem
+                                    .fScreen__listImg
+                                        img(src="img/fList1.png", alt="alt")
+                                    .fScreen__listText
+                                        b Более 20 
+                                        |анимационных гастро-станций
+                                .fScreen__listItem
+                                    .fScreen__listImg
+                                        img(src="img/fList2.png", alt="alt")
+                                    .fScreen__listText
+                                        b Кулинарные 
+                                        |мастер-классы и 
+                                        b шоу программы
 
-    footer.footer
-        .container_center
-            p
-            | &copy; 2016 |
-            i.fa.fa-github(aria-hidden='true') &nbsp;
-            a(href='#') View Source
+
+                                .fScreen__listItem
+                                    .fScreen__listImg
+                                        img(src="img/fList3.png", alt="alt")
+                                    .fScreen__listText
+                                        b Дизайнерский 
+                                        |декор и аксессуары
+
+            // end fScreen
+
+            // begin service
+            section.section.service#service
+                .container_center
+                    h2.section__title.section__title_center Детально продумаем концепцию вашего торжества и приготовим 
+                        span вкусные, оригинальные блюда 
+                    .section__sub.section__sub_center Получите расчет 3-х вариантов меню под ваш бюджет 
+                    .service__content
+                        -var service = ['Банкеты', 'Фуршеты', 'Гала-ужины', 'Свадебные торжества', 'Барбекю на природе', 'Кофе-брейки'];
+                        each item, index in service
+                            .service__item
+                                .service__plate
+                                    .service__img
+                                        img(src="img/service"+(index+1)+".png", alt="alt")
+                                    .service__name= item
+
+            // end service
+
+            // begin twoHour
+            section.section.twoHour#twoHour
+                .container_center
+                    .twoHour__content
+                        img.twoHour__bg(src="img/twoHour.png", alt="Меню")
+                        .twoHour__left
+                            h2.section__title Заполните форму и получите готовое коммерческое предложение 
+                                br
+                                span уже через 2 часа 
+                            .section__sub 3 варианта меню под ваш бюджет 
+                            .twoHour__comment
+                                .twoHour__commentIcon
+                                    img(src="img/comment.png", alt="")
+                                .twoHour__commentContent После утверждения меню мы сможем назначить встречу 
+                                    span для бесплатной дегустации
+                        .twoHour__right
+                            form.form(action="#" method="method")
+                                input(type="hidden", name="subject" value="3 варианта меню")
+                                .form__title Заполните форму
+                                .form__row
+                                    .form__label На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?
+                                    input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                                .form__row
+                                    .form__label Куда выслать готовый расчет?
+                                    input(type="email", name="email" placeholder="mail@mail.ru" required)
+                                .form__row
+                                    button.btn(type="submit") Получить расчет меню
+                                .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                    a(href="/") Политикой конфиденциальности
+
+            // end twoHour
+
+            .darkWrap
+                // begin wow
+                section.section.wow#wow
+                    .container_center
+                        h2.section__title 
+                            span Сервировка, 
+                            |которая вызывает WOW-эффект и удивляет даже самых искушенных
+                        .section__sub Предложим вам десятки способов, чтобы превратить подачу блюд 
+                            span в 
+                            span арт-объект
+                            .wow__info
+                                .wow__infoContent
+                                    .wow__infoIcon
+                                        img(src="img/information.png", alt="")
+                                    .wow__infoText Например, используем вертикальные стенды, где можно разместить салаты в индивидуальной упаковке, пончики, напитки и т. п
+
+
+                        .wow__list
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/wow1.png", alt="Необычные подвесные конструкции")
+                                .wow__listText Необычные подвесные конструкции
+
+
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/wow2.png", alt="Эко-стиль")
+                                .wow__listText Эко-стиль
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/wow3.png", alt="Donut Wall")
+                                .wow__listText Donut Wall
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/wow4.png", alt="Shampagne Wall")
+                                .wow__listText Shampagne Wall
+                            .wow__listBage
+                                img(src="img/instagram-logo.png", alt="")
+                                span Гости будут 
+                                    br 
+                                    |активно делиться
+                                    br
+                                    |фото с вашего
+                                    br
+                                    |ивента в
+                                    br
+                                    |соцсетях!
+
+                // end wow
+
+                // begin show
+                section.section.show#show
+                    .show__content
+                        h2.section__title
+                            span Кулинарные 
+                            |шоу-программы
+                        .section__sub Гости готовят еду вместе с поваром
+
+                // end show
+
+                // begin molecular
+                section.section.molecular#molecular
+                    .container_center
+                        .molecular__content
+                            .molecular__left
+                                h2.section__title 
+                                    span Молекулярная кухня, 
+                                    |где используются инструменты из научных лабораторий 
+                                .section__sub Последние технические новинки <br>и безопасные пищевые добавки позволяют нам создать 
+                                    span блюда удивительного вкуса, 
+                                    |которые 
+                                    span невозможно приготовить 
+                                    |в домашних условиях
+                            .molecular__right
+                                .molecularMeals__item
+                                    .molecularMeals__img
+                                        img(src="img/molecul1.png", alt="")
+                                    .molecularMeals__text Апельсиновые спагетти
+                                .molecularMeals__item
+                                    .molecularMeals__img
+                                        img(src="img/molecul2.png", alt="")
+                                    .molecularMeals__text Твердый мохито
+                                .molecularMeals__item
+                                    .molecularMeals__img
+                                        img(src="img/molecul3.png", alt="")
+                                    .molecularMeals__text Вишня из фуагра
+
+                        .molecular__listTitle Блюда могут подаваться в разных форматах:
+                        .service__content
+                            -var service = ['Анимационная гастро-станция', 'Мастер-класс с участием гостей', 'Фуршетная линия закусок'];
+                            each item, index in service
+                                .service__item
+                                    .service__plate
+                                        .service__img
+                                            img(src="img/molecular"+(index+1)+".png", alt="alt")
+                                        .service__name= item
+
+                        .molecular__action
+                            button.btn(type="button" data-toggle="modal" data-target="#getMenuMolecular") Рассчитать стоимость молекулярного меню
+
+                // end molecular
+
+            // begin station
+            section.section.station#station
+                .container_center
+                    h2.section__title.section__title_center 
+                        span Более 20 анимационных гастро-станций, 
+                        |на которых повара демонстрируют 
+                        br
+                        |свое мастерство
+                    .section__sub.section__sub_center Анимационные станции всегда вызывают интерес и желание попробовать блюдо, которое было приготовлено здесь и сейчас
+                    .station__content
+                        .wow__list
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/station1.png", alt="Бургерная станция")
+                                .wow__listText Бургерная станция
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/station2.png", alt="Вафли из Гонконга")
+                                .wow__listText Вафли из Гонконга
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/station3.png", alt="Станция морских ежей")
+                                .wow__listText Станция морских ежей
+                            .wow__listItem
+                                .wow__listImg
+                                    img(src="img/station4.png", alt="Хамон станция")
+                                .wow__listText Хамон станция
+
+            // end station
+
+            // begin place
+            section.section.place#place
+                .container_center
+                    h2.section__title.section__title_center
+                        span Поможем подобрать место, 
+                        |идеально подходщее под формат вашего мероприятия
+                    .section__sub.section__sub_center Сотрудничаем с лучшими площадками Москвы
+                    .place__content
+                        .service__content
+                            .service__item
+                                .service__plate
+                                    .service__img
+                                        img(src="img/place1.png", alt="")
+                                    .service__name ЦДП
+                                    .service__text
+                                        .service__adress
+                                            b Адрес: 
+                                            |г.&nbsp;Москва, ул.&nbsp;Покровка, 
+                                            br
+                                            |д.&nbsp;47
+                                        p Современные и полностью оснащенные залы, профессиональный и оперативный менеджмент позволят сэкономить ваши ресурсы и время
+                                        ul
+                                            li Большой зал и Малый зал 
+                                            li Фойе
+                                            li Аудитории и Лектории 
+                                            li Видеоповерхности
+                                            li Медиафасад (при согласовании контента) 
+                                            li Звуковое и световое оборудование 
+
+                            .service__item
+                                .service__plate
+                                    .service__img
+                                        img(src="img/place2.png", alt="")
+                                    .service__name ДАНИЛОВСКИЙ EVENT HALL
+                                    .service__text
+                                        .service__adress
+                                            b Адрес: 
+                                            |г.&nbsp;Москва, ул.&nbsp;Дубининская, д.71, стр.5
+                                        p Светлый, современный интерьер с легкими акцентами актуальной классики создает уютное и очень гармоничное пространство.
+                                        p Оригинальное дизайнерское решение притягивает внимание и делает атмосферу зала не только комфортной, но и поистине волшебной
+
+                            .service__item
+                                .service__plate
+                                    .service__img
+                                        img(src="img/place3.png", alt="")
+                                    .service__name Digital LOFT
+                                    .service__text
+                                        .service__adress
+                                            b Адрес: 
+                                            |г.&nbsp;Москва, ул.&nbsp;Большая Почтовая, д.&nbsp;20с1
+
+                                        p 2 этажа 800 метрового лофта, с изолированными друг от друга входными группами, внутри образуют единое пространство, соединенное широкой лестницей и просторными холлами
+
+                    .place__action
+                        button.btn(type="button"  data-toggle="modal" data-target="#getPlace") Получить полный каталог площадок
+
+            // end place
+
+            // begin catering
+            section.section.catering#catering
+                .container_center
+                    .catering__top
+                        .catering__left
+                            img(src="img/director.png", alt="alt")
+                            .catering__name Александр Смирнов
+                            .catering__prof Генеральный директор «Мольберт» кейтеринг
+                        .catering__right
+                            h2.section__title Кейтеринг 
+                                span «Мольберт»
+                            ul.catering__list
+                                li С 2018 года провели более 100 мероприятий и обслужили около 30 000 гостей
+                                li 40 сотрудников в штате и более 500 на субподряде
+                            .catering__descr «Наш подход — относиться предельно внимательно ко всем деталям в оформлении, декоре, сервировке, подаче. Мы продумываем каждый элемент, чтобы у вас получился идеальный праздник»
+                    form.form.catering__form
+                        input(type="hidden", name="subject" value="Перезвоните мне (блок Генеральный директор)")
+                        .form__title Мы готовы проконсультировать вас по любому вопросу
+                        .form__sub Оставьте заявку, и мы перезвоним вам уже через 15 минут в рабочее время
+                        .form__row
+                            .form__col
+                                input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                            .form__col
+                                button.btn(type="submit") Перезвоните мне
+                        .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                            a(href="#") Политикой конфиденциальности
+                        img.catering__img(src="img/plan.png", alt="")
+
+            // end catering
+
+            // begin menuPosition
+            section.section.menuPosition#menuPosition
+                .container_center
+                    .menuPosition__content
+                        .menuPosition__left
+                            img.menuPosition__paper(src="img/paperShading.png", alt="")
+                            .twoHour__comment
+                                .twoHour__commentIcon
+                                    img(src="img/smile.png", alt="")
+                                .twoHour__commentContent Мы поможем подобрать блюда под ваши пожелания либо вы 
+                                    span можете довериться 
+                                    |нашим профессионалам и 
+                                    span попробовать что-то совсем новое ;) 
+                        .menuPosition__right
+                            h2.section__title 
+                                span Более 2000 позиций в меню, 
+                                |идеально подходящих под формат кейтеринга
+                            .section__sub Наше меню регулярно расширяется и включает в себя все кухни мира и последние модные тренды
+                            .menuPosition__descr Если у вас есть фирменное блюдо, мы с радостью его приготовим для ваших гостей или вместе с ними
+                                img(src="img/menuPositionEx.png", alt="фирменное блюдо")
+
+            // end menuPosition
+
+            // begin servicing
+            section.section.servicing#servicing
+                .container_center
+                    h2.section__title.section__title_center Наши ресурсы <br>обеспечивают высококлассное 
+                        span ресторанное обслуживание
+                    .servicing__content
+                        .servicing__item
+                            .servicing__img
+                                img(src="img/servicing1.png", alt="")
+                            .servicing__descr
+                                .servicing__name Производство площадью 700 кв.м.,
+                                .servicing__text которое справится с мероприятием любого масштаба и сложности
+                        .servicing__item
+                            .servicing__img
+                                img(src="img/servicing2.png", alt="")
+                            .servicing__descr
+                                .servicing__name Собственная служба логистики
+                                .servicing__text Не зависим от подрядчиков, которые могут подвести
+                        .servicing__item
+                            .servicing__img
+                                img(src="img/servicing3.png", alt="")
+                            .servicing__descr
+                                .servicing__name Большой склад оборудования
+                                .servicing__text Вам не придется переплачивать за аренду мебели
+                        .servicing__item
+                            .servicing__img
+                                img(src="img/servicing4.png", alt="")
+                            .servicing__descr
+                                .servicing__name Штатный технолог, который 
+                                .servicing__text контролирует качество приготовления и соответствие нормам
+                        .servicing__item
+                            .servicing__img
+                                img(src="img/servicing5.png", alt="")
+                            .servicing__descr
+                                .servicing__name Фермерские продукты
+                                .servicing__text Поставки только от проверенных поставщиков
+
+            // end servicing
+
+            // begin chef
+            // section.section.chef#chef
+                .container_center
+                    .chef__content
+                        .chef__left
+                            h2.section__title Шеф-повар, которому доверяют мероприятия 
+                                span государственного уровня
+                            ul.chef__list
+                                li.chef__listItem Организация питания для VIP-персон на саммите АТЭС во Владивостоке (400 человек)
+                                li.chef__listItem Организация питания президентской ложи на открытии Олимпийских игр в Сочи (240 человек)
+                                li.chef__listItem Неоднократная помощь в организации мероприятий для двухсторонних встреч глав государств в Сочи, Санкт-Петербурге и Москве
+                                li.chef__listItem Совместная работа с известными итальянскими и французскими  шеф-поварами: Мирко Калдино, Карло Греку, Николас Отт
+                                li.chef__listItem Опыт в организации питания на мероприятиях численностью до 5000 человек
+                                li.chef__listItem Обучение техникам молекулярной кухни в Европе
+                                li.chef__listItem Организация мероприятий для министров и губернаторов
+                        .chef__right
+                            img(src="img/chef.jpg", alt="Сергей Еремин")
+                            .catering__name Сергей Еремин
+                            .catering__prof Шеф-повар «Мольберт» кейтеринг
+
+            // end chef
+
+            .darkenWrap
+
+                // begin fullServ
+                section.section.fullServ#fullServ
+                    .container_center
+                        h2.section__title.section__title_center Сделаем так, что 
+                            span ваше торжество пройдет идеально 
+                            |от начала до конца
+                        .fullServ__content
+                            .fullServ__item
+                                .fullServ__count
+                                    img(src="img/01.png", alt="")
+                                .fullServ__wrap
+                                    .fullServ__text
+                                        b Персональный менеджер, 
+                                        |который всегда на связи, чтобы ответить на вопрос или срочно скорректировать заказ
+                            .fullServ__item
+                                .fullServ__count
+                                    img(src="img/02.png", alt="")
+                                .fullServ__wrap
+                                    .fullServ__text
+                                        b Точный тайминг подачи блюд,
+                                        |за которым ваш менеджер будет следить лично
+                            .fullServ__item
+                                .fullServ__count
+                                    img(src="img/03.png", alt="")
+                                .fullServ__wrap
+                                    .fullServ__text
+                                        b Лучшие площадки Москвы,
+                                        |подобранные специально  под формат вашего мероприятия и численность гостей
+
+                        .fullServ__form
+                            .fullServ__left
+                                .fullServ__title Оставьте заявку,
+                                .fullServ__sub чтобы обсудить свои пожелания <br>с нашим менеджером и получить расчет 3 вариантов меню под ваш бюджет
+                                .twoHour__comment
+                                    .twoHour__commentIcon
+                                        img(src="img/star.png", alt="")
+                                    .twoHour__commentContent Пришлем на вашу почту 
+                                        span уже через 2 часа
+                                img.fullServ__img(src="img/fullServMenu.png", alt="")
+                            .fullServ__right
+                                form.form
+                                    input(type="hidden", name="subject" value="Получить расчет меню (блок ваше торжество пройдет идеально)")
+                                    .form__row
+                                        .form__label На какой номер вам перезвонить?
+                                        input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                                    .form__row
+                                        .form__label Куда выслать готовый расчет?
+                                        input(type="email", name="email" placeholder="mail@mail.ru" required)
+                                    .form__row
+                                        button.btn(type="submit") Получить расчет меню
+                                    .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                        a(href="/") Политикой конфиденциальности
+
+                // end fullServ
+
+                // begin uniform
+                section.section.uniform#uniform
+                    .container_center
+                        h2.section__title.section__title_center Униформа официантов 
+                            span безупречно 
+                            |подойдет формату мероприятия 
+                        .section__sub.section__sub_center Предлагаем на выбор 5 вариантов униформ персонала:
+                        .uniform__content
+                            .uniform__item
+                                .uniform__text Каждый сотрудник регулярно проходит 
+                                    b специальную аттестацию
+                            .uniform__item
+                                .uniform__text Для международных событий приглашаем 
+                                    b персонал со знанием иностранных языков
+                            .uniform__item
+                                .uniform__text Все официанты и бармены имеют 
+                                    b опыт работы на масштабных мероприятиях
+
+                // end uniform
+
+        // begin estimate
+        section.section.estimate#estimate
+            .container_center
+                .estimate__content
+                    .estimate__left
+                        h2.section__title
+                            span Точно рассчитаем смету, 
+                            |чтобы гости были довольны, а бюджет использован рационально
+                        .estimate__listTitle В стоимость входят: 
+                        ul.estimate__list
+                            li.estimate__listItem разработка индивидуального меню и концепции
+                            li.estimate__listItem продукты, посуда, оборудование, аксессуары
+                            li.estimate__listItem приготовление, сервировка, обслуживание и уборка
+                            li.estimate__listItem печать меню на бланках
+                            li.estimate__listItem организация именной рассадки
+                            li.estimate__listItem доставка еды и оборудования
+
+                        .estimate__other
+                            .estimate__otherTitle Дополнительно можно заказать:
+                            ul.estimate__otherList
+                                li.estimate__otherItem Артистов шоу-бизнеса
+                                li.estimate__otherItem Артистов шоу-программ
+                                li.estimate__otherItem Бармен-шоу
+                                li.estimate__otherItem Флористическое оформление
+                                li.estimate__otherItem Световое и музыкальное оборудование
+
+                    .estimate__right
+                        .estimate__info
+                            .estimate__infoItem
+                                .estimate__infoImg
+                                    img(src="img/estimate1.png", alt="")
+                                .estimate__infoText
+                                    b Прозрачные сметы
+                                    |без скрытых сборов, доплат, комиссий
+                            .estimate__infoItem
+                                .estimate__infoImg
+                                    img(src="img/estimate2.png", alt="")
+                                .estimate__infoText
+                                    b Бонусы
+                                    |для постоянных клиентов
+                            .estimate__infoItem
+                                .estimate__infoImg
+                                    img(src="img/estimate3.png", alt="")
+                                .estimate__infoText
+                                    b Нет «пробкового сбора»
+                                    |Вы можете закупить свой алкоголь
+                .estimate__slider
+                    .estimate__sliderItem(style="background-image: url('img/estimateSlide1.jpg')")
+                        .estimate__sliderDescr
+                            b Банкет
+                            |Частное мероприятие <br>260 персон
+                    .estimate__sliderItem(style="background-image: url('img/estimateSlide1.jpg')")
+                        .estimate__sliderDescr
+                            b Фуршет 
+                            |Компания «Мегафон» <br>260 персон
+                    .estimate__sliderItem(style="background-image: url('img/estimateSlide1.jpg')")
+                        .estimate__sliderDescr
+                            b Фуршет 
+                            |Компания «Бест Новострой» <br>260 персон
+                    //- .estimate__sliderItem(style="background-image: url('img/estimateSlide1.jpg')")
+                    //-     .estimate__sliderDescr
+                    //-         b Банкет
+                    //-         |Частное мероприятие <br>260 персон
+
+                .estimate__thumps
+                    .estimate__thumpsItem
+                        .estimate__thumpsImg(style="background-image: url('img/estimateSlide1.jpg')")
+                        .estimate__thumpsName 
+                            span Банкет 
+                            |Частное мероприятие
+                            .estimate__thumpsName_hide 260 персон
+                    .estimate__thumpsItem
+                        .estimate__thumpsImg(style="background-image: url('img/estimateThumps2.jpg')")
+                        .estimate__thumpsName
+                            span Фуршет 
+                            |Компания «Мегафон»
+                            .estimate__thumpsName_hide 260 персон
+                    .estimate__thumpsItem
+                        .estimate__thumpsImg(style="background-image: url('img/estimateThumps3.jpg')")
+                        .estimate__thumpsName
+                            span Фуршет 
+                            |Компания «Бест Новострой»
+                            .estimate__thumpsName_hide 260 персон
+                    //- .estimate__thumpsItem
+                    //-     .estimate__thumpsImg(style="background-image: url('img/estimateThumps1.jpg')")
+                    //-     .estimate__thumpsName
+                    //-         span Банкет 
+                    //-         |Частное мероприятие
+                    //-         .estimate__thumpsName_hide 260 персон
+
+        // end estimate
+
+        // begin getOrder
+        section.section.getOrder#getOrder
+            .container_center
+                .getOrder__content
+                    .getOrder__left
+                        h2.section__title Оставьте заявку и получите готовое коммерческое предложение 
+                            span уже через 2 часа 
+                        .getOrder__steps
+                            .getOrder__item
+                                .getOrder__img
+                                    img(src="img/getOrder1.png", alt="")
+                                .getOrder__text
+                                    .getOrder__btn Шаг 1.
+                                    |Вы получаете детальное коммерческое предложение с расчетом 3-х индивидуальных вариантов меню
+                            .getOrder__item
+                                .getOrder__text
+                                    .getOrder__btn Шаг 2.
+                                    |После утверждения меню назначаем встречу для бесплатной дегустации
+                                .getOrder__img
+                                    img(src="img/getOrder2.png", alt="")
+                    .getOrder__right
+                        form.form(action="#" method="method")
+                            input(type="hidden", name="subject" value="Получить коммерческое предложение (последний блок)")
+                            .form__title Заполните форму
+                            .form__row
+                                .form__label На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?
+                                input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                            .form__row
+                                .form__label Куда выслать готовый расчет?
+                                input(type="email", name="email" placeholder="mail@mail.ru" required)
+                            .form__row
+                                button.btn(type="submit") Получить расчет меню
+                            .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                a(href="/") Политикой конфиденциальности
+
+        // end getOrder
+
+        footer.footer
+            .container_center
+                .footer__top
+                    .footer__info
+                        .footer__infoItem
+                            .footer__infoIcon
+                                img(src="img/mail.png", alt="")
+                            a.footer__infoDescr(href="mailto: zakaz@molbert-banket.ru") zakaz@molbert-banket.ru
+                        .footer__infoItem
+                            .footer__infoIcon
+                                img(src="img/clock.png", alt="")
+                            .footer__infoDescr пн-сб с 09:00 до 18:00
+                        .footer__infoItem
+                            .footer__infoIcon
+                                img(src="img/marker.png", alt="")
+                            .footer__infoDescr г. Москва, 115088, ул. 2-я Машиностроения д.23
+                        .footer__infoItem
+                            .footer__infoIcon
+                                img(src="img/insta.png", alt="")
+                            a.footer__infoDescr(href="") @molbert.banket
+
+                    .footer__contact
+                        a.call(href="tel:+7(495) 565-37-31") +7(495) 565-37-31
+                        .call__action(data-toggle="modal" data-target="#callBack") Перезвонить вам?
+                .footer__bottom
+                    a.footer__privacy(href="#") Политика конфиденциальности
+                    .footer__dev Создание сайта — 
+                        a(href="#") «Время Первых»
+
+
+        //- // Button trigger modal callBack
+        //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#callBack") Click to open modal
+        // Begin Modal callBack
+        .modal.fade.callBack#callBack
+            .modal-dialog.modal-dialog--sm
+                .modal-content
+                    a(href="#" class="modal-close" data-dismiss="modal")
+                    .modal-body 
+                        form.form(action="#" method="method")
+                            input(type="hidden", name="subject" value="Перезвонить вам (блок с телефоном в шапке или подвале сайта)")
+                            .form__title Заполните форму
+                            .form__row
+                                .form__label На какой номер вам перезвонить?
+                                input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                            .form__row
+                                button.btn(type="submit") Заказать звонок
+                            .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                a(href="/") Политикой конфиденциальности
+        // End modal callBack
+
+        //- // Button trigger modal getMenu
+        //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#getMenu") Click to open modal
+        // Begin Modal getMenu
+        .modal.fade.getMenu#getMenu
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="modal-close" data-dismiss="modal")
+                    .modal-body
+                        .getMenu__content
+                            .getMenu__left
+                                .section__title Заполните форму 
+                                    br
+                                    |и получите готовое коммерческое предложение 
+                                    span уже через 2 часа 
+                                .section__sub 3 варианта меню под ваш бюджет 
+                                .twoHour__comment
+                                    .twoHour__commentIcon
+                                        img(src="img/comment.png", alt="")
+                                    .twoHour__commentContent После утверждения меню мы сможем назначить встречу 
+                                        span для бесплатной дегустации
+                            .getMenu__right
+                                form.form(action="#" method="method")
+                                    input(type="hidden", name="subject" value="Получить расчет меню")
+                                    .form__title Заполните форму
+                                    .form__row
+                                        .form__label На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?
+                                        input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                                    .form__row
+                                        .form__label Куда выслать готовый расчет?
+                                        input(type="email", name="email" placeholder="mail@mail.ru" required)
+                                    .form__row
+                                        button.btn(type="submit") Получить расчет меню
+                                    .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                        a(href="/") Политикой конфиденциальности
+        // End modal getMenu
+
+        // Begin Modal getMenu
+        .modal.fade.getMenu#getMenuMolecular
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="modal-close" data-dismiss="modal")
+                    .modal-body
+                        .getMenu__content
+                            .getMenu__left
+                                .section__title Заполните форму 
+                                    br
+                                    |и получите готовое коммерческое предложение 
+                                    span уже через 2 часа 
+                                .section__sub 3 варианта меню под ваш бюджет 
+                                .twoHour__comment
+                                    .twoHour__commentIcon
+                                        img(src="img/comment.png", alt="")
+                                    .twoHour__commentContent После утверждения меню мы сможем назначить встречу 
+                                        span для бесплатной дегустации
+                            .getMenu__right
+                                form.form(action="#" method="method")
+                                    input(type="hidden", name="subject" value="Получить расчет молекулярного меню")
+                                    .form__title Заполните форму
+                                    .form__row
+                                        .form__label На какой номер вам перезвонить, чтобы уточнить детали вашего мероприятия?
+                                        input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                                    .form__row
+                                        .form__label Куда выслать готовый расчет?
+                                        input(type="email", name="email" placeholder="mail@mail.ru" required)
+                                    .form__row
+                                        button.btn(type="submit") Получить расчет меню
+                                    .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                        a(href="/") Политикой конфиденциальности
+        // End modal getMenu
+
+        // Begin Modal getPlace
+        .modal.fade.callBack#getPlace
+            .modal-dialog.modal-dialog--sm
+                .modal-content
+                    a(href="#" class="modal-close" data-dismiss="modal")
+                    .modal-body 
+                        form.form(action="#" method="method")
+                            input(type="hidden", name="subject" value="Получить каталог площадок")
+                            .form__title Заполните форму
+                            .form__row
+                                .form__label На какой номер вам перезвонить, чтобы уточнить детали мероприятия?
+                                input(type="tel", name="tel" placeholder="+7(___)___-__-__" required)
+                            .form__row
+                                .form__label Куда выслать каталог площадок?
+                                input(type="email", name="email" placeholder="mail@mail.ru" required)
+                            .form__row
+                                button.btn(type="submit") Получить каталог площадок
+                            .form__privacy Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                a(href="/") Политикой конфиденциальности
+        // End modal getPlace
+
+        script(src="js/jquery.js")
+        script(src="js/jquery.inputmask.min.js")
+        script(src="js/slick.min.js")
+        script(src="js/modal.js")
+        script(src="js/function.js?"+version+"")

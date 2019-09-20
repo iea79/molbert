@@ -1,0 +1,155 @@
+.wow {
+    .section {
+        &__title {
+            max-width: 19em;
+        }
+
+        &__sub {
+            max-width: 19em;
+            position: relative;
+        }
+
+    }
+
+    &__info {
+        background: url("../img/wowInfo.png") 0 0 no-repeat;
+        background-size: 100% 100%;
+        // background-color: $color_withe;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            top: -1.2em;
+            left: 133%;
+            width: 24.2em;
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 0;
+                top: 1em;
+                right: 1em;
+                bottom: 1em;
+                left: 1em;
+                box-shadow: 0 1.81em 2.75em 1.06em rgba(40, 40, 40, 0.04), 0 0 2.25em 1.25em rgba(255, 255, 255, 0.24);
+            }
+
+            &:after {
+                content: '';
+                background: url("../img/wowInfoLine.png") 0 0 no-repeat;
+                background-size: 100%;
+                width: 8.64em;
+                height: 3.35em;
+                position: absolute;
+                right: 98%;
+                bottom: -0.2em;
+            }
+        }
+
+        @media (max-width: 767px) {
+            margin: 1em -0.8em;
+        }
+
+        &Content {
+            display: flex;
+            padding: 1.1em 0.8em 1em 1.1em;
+            text-align: left;
+
+            @media (min-width: 768px) {
+                padding: 2em 1em 1.7em 2.1em;
+            }
+            @media (max-width: 767px) {
+                margin-top: 2.2em;
+                font-size: 1.25em;
+            }
+        }
+
+        &Icon {
+            flex: none;
+            margin-right: 0.6em;
+        }
+
+        &Text {
+            font-size: 0.7em;
+            line-height: 1.6;
+            color: #393939;
+        }
+    }
+
+    &__list {
+        margin: 3.3em 0 2em -1.9em;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            margin: 6.6em -1em 2em -1.9em;
+        }
+
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+
+        &Bage {
+            background: url("../img/wowBage.png") 0 0 no-repeat;
+            background-size: 100%;
+            text-align: center;
+            padding: 1.3em 1.4em 1.8em;
+            margin: 1.6em auto -1.2em;
+
+            @media (min-width: 768px) {
+                position: absolute;
+                left: 13.1em;
+                top: -6.5em;
+                font-size: 1em;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 1.3em;
+            }
+
+            span {
+                margin-top: 0.4em;
+                display: block;
+                color: #201f1f;
+                font-size: 0.875em;
+                font-weight: 500;
+                letter-spacing: 0.018em;
+                line-height: 1.29;
+                @media (max-width: 767px) {
+                    margin-bottom: 2em;
+                }
+            }
+        }
+
+        &Item {
+            width: 50%;
+            padding-left: 1.9em;
+
+            @media (min-width: 768px) {
+                padding-left: 1.9em;
+                width: 25%;
+            }
+
+            @media (max-width: 767px) {
+                margin-bottom: 1.4em;
+            }
+        }
+
+        &Img {
+            margin-bottom: 1.1em;
+        }
+
+        &Text {
+            text-align: center;
+            font-size: 0.83em;
+            font-weight: 500;
+            line-height: 1.56;
+            letter-spacing: 0.023em;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+            }
+        }
+    }
+
+}

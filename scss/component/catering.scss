@@ -1,0 +1,243 @@
+.catering {
+    background: #fcfcfc;
+    padding-bottom: 3em;
+
+    @media (min-width: 768px) {
+        padding-bottom: 5em;
+        background: url("../img/cateringbg.jpg") 0 0 no-repeat / cover;
+    }
+
+    @media (max-width: 767px) {
+        overflow: hidden;
+    }
+
+    &__top {
+        display: flex;
+
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__left {
+        flex: none;
+        position: relative;
+
+        @media (min-width: 768px) {
+            width: 47%;
+        }
+
+        @media (max-width: 767px) {
+            order: 1;
+            font-size: 0.8em;
+            left: -5em;
+        }
+
+        img {
+            max-width: none;
+            width: 43em;
+            position: relative;
+            left: -5.2em;
+            top: 0.4em;
+        }
+    }
+
+    &__name {
+        background-color: #fedd69;
+        font-weight: 500;
+        color: #201f1f;
+        padding: 0.75em 1.4em;
+        position: absolute;
+        right: 7.3em;
+        bottom: 5.9em;
+        border-radius: 0.3em;
+        transform: skewX(-9deg);
+        z-index: 1;
+        font-size: 1.7em;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+            right: -8.8em;
+            bottom: 12.5em;
+
+        }
+    }
+
+    &__prof {
+        box-shadow: 0 0.25em 0.75em 0.063em rgba(92, 92, 92, 0.09);
+        background-color: #ffffff;
+        font-size: 1.5em;
+        color: #383838;
+        line-height: 1.33;
+        letter-spacing: 0.019em;
+        position: absolute;
+        padding: 0.7em 1.3em;
+        width: 15.5em;
+        right: 5.9em;
+        bottom: 3.1em;
+        border-radius: 0.3em;
+
+        @media (min-width: 768px) {
+            padding: 0.7em 1.3em;
+            font-size: 0.9em;
+            right: -12.2em;
+            bottom: 10.2em;
+
+        }
+    }
+
+    &__right {
+        padding-top: 2em;
+
+        @media (min-width: 768px) {
+            padding-top: 4.2em;
+        }
+    }
+
+    &__list {
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+            padding: 0;
+            margin: 0 0 1.3em;
+            list-style: none;
+            font-size: 1.3em;
+            line-height: 1.6;
+            color: #565656;
+            letter-spacing: 0.028em;
+
+            li {
+                position: relative;
+                padding-left: 1.1em;
+                margin-bottom: 0.6em;
+
+                &:before {
+                    content: '';
+                    width: 0.4em;
+                    height: 0.4em;
+                    border: 0.09em solid #c5ac86;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0.1em;
+                    top: 0.5em;
+                }
+            }
+        }
+    }
+
+    &__descr {
+        color: #393939;
+        line-height: 1.8;
+        letter-spacing: 0.02em;
+        position: relative;
+        font-size: 1.2em;
+
+        @media (min-width: 768px) {
+            line-height: 1.88;
+            max-width: 34em;
+            padding-left: 3.2em;
+            font-size: 1em;
+        }
+
+        &:before {
+            content: '“';
+            position: absolute;
+            opacity: 0.07;
+            color: #393939;
+            font-family: "Amazing Grotesk DemiBold";
+            font-weight: 600;
+            font-size: 32.5em;
+            font-weight: 400;
+            line-height: 1;
+            // letter-spacing: 0.02em;
+            right: 0.01em;
+            top: 0.18em;
+            // bottom: 0.9em;
+
+            @media (min-width: 768px) {
+                font-size: 27.5em;
+                right: -0.05em;
+                top: -0.25em;
+
+            }
+
+        }
+    }
+
+    &__form {
+        margin: -0.9em auto 2em;
+        position: relative;
+        background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+        box-shadow: 0 0.813em 1.75em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.25em 0.063em rgba(255, 255, 255, 0.24);
+        z-index: 10;
+
+        @media (min-width: 768px) {
+            background: url("../img/cateringForm.png") 0 0 no-repeat / 100% 100%;
+            margin: -5.2em auto 2em;
+            max-width: 59.5em;
+            right: -1.7em;
+
+        }
+
+        .form {
+            &__title {
+                margin-top: -0.4em;
+                margin-bottom: 0.4em;
+
+                @media (max-width: 767px) {
+                    font-size: 1.8em;
+                    margin-top: 0.4em;
+                }
+            }
+
+            &__sub {
+                @media (max-width: 767px) {
+                    font-size: 1.2em;
+                }
+            }
+
+            &__row {
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 auto 1em;
+                    max-width: 42em;
+                }
+            }
+
+            &__col {
+                @media (min-width: 768px) {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    width: 50%;
+                }
+                @media (max-width: 767px) {
+                    margin-bottom: 2em;
+                }
+            }
+
+            &__privacy {
+                margin: 1.6em auto 0;
+
+                @media (min-width: 768px) {
+                    max-width: 41em;
+                }
+            }
+
+        }
+    }
+
+    &__img {
+        @media (max-width: 767px) {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            position: absolute;
+            right: -8.8em;
+            bottom: -9.8em;
+            width: 19em;
+        }
+    }
+
+}

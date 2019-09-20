@@ -1,13 +1,13 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Open Sans";
+$main_font_family: "Geometria";
 $main_color: #000;
 $main_line_height: 1.2;
-$main_font_size: 16px;
+$main_font_size: 1em;
 
-$container_width: 1200px;
+$container_width: 71.8em;
 
-$footer_height: 60px;
+$footer_height: auto;
 
 // Color collection for elements
 $color_primary: #7b8287;
@@ -31,7 +31,7 @@ $el-colors: (
 
 /* Grid */
 /* ======================================================================== */
-$grid_padding: 20px;
+$grid_padding: 1.7em;
 
 /* Form */
 /* ======================================================================== */

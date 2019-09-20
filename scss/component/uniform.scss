@@ -1,0 +1,100 @@
+.uniform {
+    background: url("../img/uniformbg.png") top 30.2em center no-repeat / 148%;
+    padding: 6.2em 0 3.9em;
+
+    @media (min-width: 768px) {
+        background: url("../img/uniformbg.png") bottom center no-repeat / 101%;
+        padding: 7em 0 7.2em;
+    }
+
+    .section {
+
+        @media (max-width: 767px) {
+            &__title {
+                font-size: 2.1em;
+                line-height: 1.4;
+            }
+
+            &__sub {
+                font-size: 1.8em;
+                padding-left: 0.6em;
+                padding-right: 0.6em;
+            }
+        }
+
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            margin: 31.5em -1em 0 -2em;
+        }
+
+        @media (max-width: 767px) {
+            margin: 0 -1.2em;
+            padding-top: 10.5em;
+        }
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 0.4em;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            width: 33.3%;
+            margin-left: 2em;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 2em;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+
+            @media (max-width: 767px) {
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: url("../img/iniformItem.png") 0 0 no-repeat / 100% 100%;
+            }
+            @media (min-width: 768px) {
+                $carSize: 3em;
+                width: $carSize;
+                height: $carSize;
+                left: -($carSize/2)-0.6em;
+                border-radius: 0.1em;
+                transform: rotate(70deg) skewX(51deg);
+                top: 4.4em;
+                box-shadow: 0 0 1em 1000em rgba(254,221,105,1);
+            }
+
+            // z-index: 1;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+        line-height: 1.8;
+        padding: 1.3em 1.7em 1.3em 2.7em;
+        color: #201f1f;
+        font-size: 1.3em;
+
+        @media (min-width: 768px) {
+            line-height: 1.9;
+            padding: 1.3em 2.7em;
+            font-size: 1em;
+        }
+        // font-weight: 500;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+}

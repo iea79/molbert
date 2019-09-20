@@ -1,0 +1,127 @@
+.twoHour {
+    padding: 4.5em 0 4em;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 768px) {
+        padding: 4.5em 0 7.4em;
+    }
+
+    @media (max-width: 767px) {
+        overflow: hidden;
+    }
+
+    .section {
+        &__title {}
+
+        &__sub {}
+
+    }
+
+    &__content {
+        position: relative;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__bg {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 93.96em;
+            height: 63.53em;
+            max-width: none;
+            top: -2.6em;
+            left: -16.8em;
+        }
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            flex: none;
+            width: 64%;
+            margin-right: 2.8%;
+        }
+    }
+
+    &__comment {
+        position: relative;
+
+        @media (min-width: 768px) {
+            margin-left: 7.7em;
+            width: 17.3em;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 1.3em;
+            margin-top: 2.3em;
+        }
+
+        &Icon {
+            position: absolute;
+            width: 3.25em;
+            height: 3.25em;
+            left: 1.9em;
+            top: -1.9em;
+            z-index: 1;
+        }
+
+        &Content {
+            overflow: hidden;
+            position: relative;
+            border-radius: 0.6em;
+            padding: 2.2em 1.8em 1.3em;
+            line-height: 1.5;
+            font-size: 0.93em;
+            color: #565656;
+            background-color: #f5f2f4;
+
+            span {
+                color: #c5ad86;
+            }
+
+            // &:before {
+            //     content: '';
+            //     z-index: -1;
+            //     position: absolute;
+            //     border-radius: 50%;
+            //     left: 13%;
+            //     top: -1.5em;
+            //     width: 3em;
+            //     height: 3em;
+            //     box-shadow: 0 0 0 1000em #f5f2f4;
+            // }
+        }
+    }
+
+    &__right {
+        padding-top: 4.6em;
+
+        .form {
+            background: url("../img/twoHourform.png") 0 0 no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+
+            @media (min-width: 768px) {
+                margin-right: -4.1em;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0.7em;
+                right: 0.7em;
+                bottom: 0.7em;
+                left: 0.7em;
+                box-shadow: 0 0.813em 1.75em 1.75em rgba(40, 40, 40, 0.04), 0 0 1.25em 1.06em rgba(255, 255, 255, 0.24);
+                z-index: -1;
+            }
+        }
+    }
+
+}

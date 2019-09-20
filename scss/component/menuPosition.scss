@@ -1,0 +1,117 @@
+.menuPosition {
+    @media (max-width: 767px) {
+        padding-top: 6.1em;
+        position: relative;
+    }
+
+    .section {
+        &__title {}
+
+        &__sub {
+            @media (min-width: 768px) {
+                padding-left: 2.9em;
+                max-width: 23em;
+                line-height: 1.5;
+            }
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        @media (min-width: 768px) {}
+        @media (max-width: 767px) {
+            // flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        flex: none;
+        order: 1;
+
+        @media (min-width: 768px) {
+            position: relative;
+            width: 42%;
+            order: initial;
+        }
+        @media (max-width: 767px) {
+            position: absolute;
+            top: 26.6em;
+            left: 1.5em;
+            right: 1.5em;
+        }
+    }
+
+    &__paper {
+        @media (min-width: 768px) {
+            max-width: none;
+            position: absolute;
+            left: -22.8em;
+            top: -27.5em;
+            width: 63.5em;
+        }
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__right {
+
+        @media (min-width: 768px) {
+            padding-top: 2em;
+            padding-top: 6.9em;
+            margin-right: -1em;
+        }
+
+    }
+
+    &__descr {
+        position: relative;
+        color: #393939;
+        letter-spacing: 0.02em;
+        text-decoration: underline;
+        line-height: 1.88;
+        margin-top: 22.1em;
+
+        @media (min-width: 768px) {
+            margin-top: -.5em;
+            padding-right: 49%;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 10.8em;
+        }
+
+        img {
+            position: absolute;
+            width: 19.75em;
+            right: -1.3em;
+            top: 4em;
+
+            @media (min-width: 768px) {
+                width: 16.75em;
+                right: 3.3em;
+                top: -6.5em;
+
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .twoHour {
+            &__comment {
+                left: -7.8em;
+                top: 22.2em;
+                width: 24.1em;
+
+                &Icon {}
+
+                &Content {
+                    padding: 2.5em 2.2em 1.7em;
+                }
+            }
+
+        }
+    }
+}

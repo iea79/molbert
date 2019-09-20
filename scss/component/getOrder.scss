@@ -1,0 +1,173 @@
+.getOrder {
+    // padding: 0em 0;
+    padding-bottom: 2.2em;
+
+    @media (max-width: 767px) {
+        margin-top: -1.6em;
+    }
+
+    .section {
+        &__title {
+            span {
+                display: block;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    &__content {
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            flex: none;
+            width: 58%;
+            margin-right: 2em;
+        }
+    }
+
+    &__steps {
+        padding-top: 0.5em;
+    }
+
+    &__item {
+        @media (max-width: 767px) {
+            margin-bottom: 1.5em;
+        }
+        @media (min-width: 768px) {
+            display: flex;
+
+            &:first-child {
+                .getOrder {
+                    &__img {
+                        width: 21em;
+
+                        &:before {
+                            width: 8.25em;
+                            height: 3.563em;
+                            right: 0.8em;
+                            bottom: -0.4em;
+                            background: url("../img/getOrderLine1.png") 0 0 no-repeat / 100%;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                padding-left: 3.8em;
+                margin-top: 3.5em;
+
+                .getOrder {
+                    &__text {
+                        padding-top: 1.6em;
+                        max-width: 15em;
+                    }
+
+                    &__img {
+                        width: 16.3em;
+
+                        &:before {
+                            width: 6.688em;
+                            height: 2.813em;
+                            top: 1.6em;
+                            right: 93%;
+                            background: url("../img/getOrderLine2.png") 0 0 no-repeat / 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            flex: none;
+            margin-right: 1em;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+
+            }
+        }
+    }
+
+    &__text {
+        color: #393939;
+        line-height: 1.88;
+        letter-spacing: 0.02em;
+        padding-top: 1.5em;
+        font-size: 1.3em;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+            padding-top: 6.3em;
+        }
+    }
+
+    &__btn {
+        box-shadow: 0 0.25em 0.75em 0.063em rgba(92, 92, 92, 0.26);
+        background-color: #fedd69;
+        // background-color: #565656;
+        padding: 0.3em 0.5em;
+        margin-bottom: 1.1em;
+        color: #201f1f;
+        text-shadow: 0 0.125em 0 rgba(255, 255, 255, 0.47);
+        font-weight: 500;
+        width: 5.5em;
+        text-align: center;
+        transform: skewX(-6deg);
+    }
+
+    &__right {
+        margin-top: 4.7em;
+
+        @media (min-width: 768px) {
+            margin-top: 4.6em;
+        }
+
+        .form {
+            background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+            position: relative;
+
+            @media (min-width: 768px) {
+                right: -4.2em;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    right: 0.7em;
+                    top: 0.7em;
+                    bottom: 0.7em;
+                    left: 0.7em;
+                    box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
+                    z-index: -1;
+                }
+            }
+
+            &__title {}
+
+            &__row {}
+
+            &__label {}
+
+            &__privacy {}
+
+        }
+    }
+
+}

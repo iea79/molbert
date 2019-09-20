@@ -1,19 +1,19 @@
 // Mixin =======================================================================
 
-// Style for columns text 
+// Style for columns text
 // Используется для многоколоночного адаптивного текста, а также для списков
 // $width - минимальная ширина колонок
 // $count - количество колонок (при уменьшении экрана меняются автоматически в зависимости от первого значения)
 // $padding - отступ между колонками
 // $divider_widh - ширина разделительной линии между колонками
-// $divider_line - стиль разделительной линии 
-// $divider_color - цвет разделительной линии 
+// $divider_line - стиль разделительной линии
+// $divider_color - цвет разделительной линии
 // Лишнее можно просто закомментировать
 // ---------------------------------
-// Example for html 
+// Example for html
 // div class="column"
 // ---------------------------------
-// Example for scss 
+// Example for scss
 // .column {
 // 	@include columns-text(300px, 3, 40px);
 // }
@@ -25,7 +25,6 @@
 	-webkit-column-width: $width; // Min width for columns
 	column-width: $width; // Min width for columns
 }
-
 
 // Float el clear
 %clear_a {
@@ -57,10 +56,21 @@
 
 // Placeholder for input
 @mixin placeholder {
-	&::-webkit-input-placeholder {@content};
-	&:-moz-placeholder           {@content};
-	&::-moz-placeholder          {@content};
-	&:-ms-input-placeholder      {@content}; 
+	&::-webkit-input-placeholder {
+		@content
+	};
+
+	&:-moz-placeholder {
+		@content
+	};
+
+	&::-moz-placeholder {
+		@content
+	};
+
+	&:-ms-input-placeholder {
+		@content
+	};
 }
 
 // %form_field {
@@ -95,14 +105,14 @@
 
 %caret {
 	display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-top: 4px solid;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;	
-    @include trs(.3);
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	@include trs(0.3);
 }
 
 %caret_up {
@@ -110,16 +120,15 @@
 	transform: rotate(180deg);
 }
 
-
 // Определяем поддержку flexbox (задается скриптом атрибут data-browser)
 // Так же определяем название браузера
 // Варианты с браузерами chrome, firefox, safari, ios
 @mixin browser($browsers: flexible) {
-  @each $browser in $browsers {
-    html[data-browser*="#{$browser}"] & {
-      @content;
-    }
-  }
+	@each $browser in $browsers {
+		html[data-browser*="#{$browser}"] & {
+			@content;
+		}
+	}
 }
 
 // Example
@@ -134,57 +143,60 @@
 // 	}
 // }
 
-
 // Ширина колонок сетки
 // Использование
-// @include grid-size(2); две колонки
-@mixin grid-size($size) {
-	&__#{$size} {
-		> div {
-			width: 100% / $size;
-		}
+// @include grid(2, 30px); две колонки
+@mixin grid($size, $gutter: $grid_padding, $bgutter: $grid_padding) {
+	margin-left: -$gutter;
+	display: flex;
+	flex-wrap: wrap;
+
+	> div,
+	a {
+		display: flex;
+		width: 100% / $size;
+		padding-left: $gutter;
+		margin-bottom: $bgutter;
 	}
 }
 // Ширина колонок сетки при смене ширины окна
-// @include xs-grid-size(2); две колонки при меньше 767 пикселей
-@mixin xs-grid-size($size) {
-	@media (max-width: 767px) {
-		@include grid-size($size);
+// @include xs-grid(2); две колонки при больше 768 пикселей
+@mixin sm-grid($size, $gutter: $grid_padding, $bgutter: $grid_padding) {
+	@media (min-width: 768px) {
+		@include grid($size, $gutter, $bgutter);
 	}
 }
-@mixin sm-grid-size($size) {
-	@media (max-grid-width: 991px) {
-		@include size($size);
+@mixin md-grid($size, $gutter: $grid_padding, $bgutter: $grid_padding) {
+	@media (min-width: 992px) {
+		@include grid($size, $gutter, $bgutter);
 	}
 }
-@mixin md-grid-size($size) {
-	@media (max-width: 1199px) {
-		@include grid-size($size);
+@mixin lg-grid($size, $gutter: $grid_padding, $bgutter: $grid_padding) {
+	@media (min-width: 1200px) {
+		@include grid($size, $gutter, $bgutter);
 	}
 }
-
-
-
-
-// 
+//
 // @TODO: Add docs to flexbox!
-// 
+//
 @mixin flex() {
-	@include browser("flexible") {	
+	@include browser("flexible") {
 		display: flex;
 		flex-wrap: wrap;
-		&>div {
+
+		& > div {
 			display: block;
 			min-height: 1px;
 			flex: none;
 		}
 	}
-	@include browser("not-flex") {	
+	@include browser("not-flex") {
 		display: block;
 		font-size: 0;
 		line-height: 0;
 		letter-spacing: -1px;
-		&>div {
+
+		& > div {
 			// display: -moz-inline-stack!important;
 			min-height: 1px;
 			display: inline-block;
@@ -198,43 +210,42 @@
 
 @mixin order($val) {
 	@include browser("flexible") {
-		// -webkit-order: $val;  
+		// -webkit-order: $val;
 		order: $val;
 	}
 }
 
-// 
+//
 // @TODO: Add docs to flex-flow!
 // flex-flow: flex-direction flex-wrap|initial|inherit;
 //
 @mixin flex-flow($params) {
 	@include browser("flexible") {
-	    // -webkit-flex-flow: $params; /* Safari 6.1+ */
-	    flex-flow: $params;
+		// -webkit-flex-flow: $params; /* Safari 6.1+ */
+		flex-flow: $params;
 	}
 }
 
-// 
+//
 // @TODO: Add docs to justify-content!
 // justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
-// 
+//
 @mixin justify-content($params) {
 	@include browser("flexible") {
-	    // -webkit-justify-content: $params; /* Safari 6.1+ */
-	    justify-content: $params;
+		// -webkit-justify-content: $params; /* Safari 6.1+ */
+		justify-content: $params;
 	}
 }
 
-// 
+//
 // @TODO: Add docs to     -webkit-align-content!
 //
 @mixin align-content($params) {
 	@include browser("flexible") {
-	    // -webkit-align-content: $params;
-	    align-content: $params;
+		// -webkit-align-content: $params;
+		align-content: $params;
 	}
 }
-
 
 // =============================================================================
 // Fonts
@@ -259,7 +270,7 @@
 // 	     url("fonts/SamplinaNeue.ttf") format("truetype"),
 // 	     url("fonts/SamplinaNeue.svg#Samplina_Neue") format("svg");
 // }
-// 
+//
 // =============================================================================
 // String Replace
 // =============================================================================

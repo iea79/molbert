@@ -1,0 +1,61 @@
+.station {
+    padding: 4.9em 0 4.2em;
+
+    @media (min-width: 768px) {
+        padding: 6.5em 0 4.2em;
+
+    }
+
+    .section {
+        &__title {
+            max-width: 22em;
+        }
+
+        &__sub {
+            max-width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    &__content {
+        margin-top: -3.2em;
+
+    }
+
+    @media (max-width: 767px) {
+        .wow__list {
+            margin: 7em 0 0;
+
+            &Item {
+                padding: 0;
+                margin: 0;
+            }
+
+            &Img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &Text {
+                padding: 0.6em 0 0;
+                font-size: 1.4em;
+            }
+
+            .slick {
+                &-slide {
+                    padding: 0.6em;
+                }
+
+                &-arrow {
+                    top: 35%;
+                }
+            }
+
+        }
+
+    }
+
+}
