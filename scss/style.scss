@@ -184,19 +184,23 @@
 
 .callBack {
     .form {
-        background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+        background: url("../img/twoHourform-mob.png") 0 0 no-repeat / 100% 100%;
         position: relative;
         padding: 4.1em 3.7em;
 
-        &:before {
-            content: '';
-            position: absolute;
-            right: 0.7em;
-            top: 0.7em;
-            bottom: 0.7em;
-            left: 0.7em;
-            box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
-            z-index: -1;
+        @media (min-width: 768px) {
+            background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0.7em;
+                top: 0.7em;
+                bottom: 0.7em;
+                left: 0.7em;
+                box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
+                z-index: -1;
+            }
         }
 
         &__label {
@@ -251,19 +255,23 @@
 
     .form {
 
-        background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+        background: url("../img/twoHourform-mob.png") 0 0 no-repeat / 100% 100%;
         position: relative;
         margin-top: -1.3em;
 
-        &:before {
-            content: '';
-            position: absolute;
-            right: 0.7em;
-            top: 0.7em;
-            bottom: 0.7em;
-            left: 0.7em;
-            box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
-            z-index: -1;
+        @media (min-width: 768px) {
+            background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: 0.7em;
+                top: 0.7em;
+                bottom: 0.7em;
+                left: 0.7em;
+                box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
+                z-index: -1;
+            }
         }
     }
 
@@ -374,6 +382,30 @@
 
         @media (max-width: 767px) {
             padding: 1.5em;
+        }
+    }
+}
+
+.privacy {
+    &.in {
+        align-items: flex-start;
+    }
+
+    .modal {
+        &-dialog {
+            max-width: 69em;
+        }
+
+        &-content {
+            background-color: $color_withe;
+            padding: 2.6em 4em;
+            border-radius: 0.4em;
+            color: #393939;
+            line-height: 1.7;
+
+            a {
+                color: #c4ab86;
+            }
         }
     }
 }

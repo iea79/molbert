@@ -103,11 +103,12 @@
         padding-top: 4.6em;
 
         .form {
-            background: url("../img/twoHourform.png") 0 0 no-repeat;
+            background: url("../img/twoHourform-mob.png") 0 0 no-repeat;
             background-size: 100% 100%;
             position: relative;
 
             @media (min-width: 768px) {
+                background: url("../img/twoHourform.png") 0 0 no-repeat;
                 margin-right: -4.1em;
             }
 

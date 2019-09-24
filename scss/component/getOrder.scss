@@ -141,11 +141,14 @@
         }
 
         .form {
-            background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+            background: url("../img/twoHourform-mob.png") 0 0 no-repeat / 100% 100%;
             position: relative;
+            margin: 0 -1.3em;
 
             @media (min-width: 768px) {
+                background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
                 right: -4.2em;
+                margin: 0;
 
                 &:before {
                     content: '';
@@ -157,6 +160,10 @@
                     box-shadow: 0 0.813em 2.45em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.95em 0.063em rgba(255, 255, 255, 0.24);
                     z-index: -1;
                 }
+            }
+
+            @media (max-width: 767px) {
+                box-shadow: 0 0.813em 1.75em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.25em 0.063em rgba(255, 255, 255, 0.24);
             }
 
             &__title {}

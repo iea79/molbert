@@ -44,7 +44,7 @@ $(document).ready(function() {
         arrows: true,
         fade: true,
         draggeble: false,
-        infinite: false,
+        // infinite: false,
         prevArrow: '<div class="slick-arrow slick-prev" />',
         nextArrow: '<div class="slick-arrow slick-next" />',
         asNavFor: '.estimate__thumps',
@@ -66,7 +66,7 @@ $(document).ready(function() {
         draggeble: false,
         arrows: false,
         focusOnSelect: true,
-        infinite: false,
+        // infinite: false,
         // vertical: true
         responsive: [
             {
@@ -85,6 +85,12 @@ $(document).ready(function() {
     });
 
     checkOnResize();
+
+    $('.modal').on('show.bs.modal', function() {
+        if ($('.modal.in').length > 0) {
+            $('.modal.in').first().modal('hide');
+        }
+    })
 
 });
 
