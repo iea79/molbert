@@ -1,6 +1,7 @@
 .darkWrap {
     padding: 5.1em 0 4em;
-    background: url("../img/darkbg.jpg") center no-repeat / cover;
+    background: url("../img/darkbg.jpg") center no-repeat;
+    background-size: cover;
     position: relative;
     z-index: 0;
     color: $color_withe;

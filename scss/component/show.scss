@@ -36,14 +36,16 @@
         margin: 5em auto 3em;
         position: relative;
         padding: 5.3em 3.3em 2.7em;
-        background: url("../img/showbg_mob.png") 0 0 no-repeat / 100% 100%;
+        background: url("../img/showbg_mob.png") 0 0 no-repeat;
+        background-size: 100% 100%;
 
         @media (min-width: 768px) {
             margin: 5em auto;
             padding: 3.6em 4.3em 3.9em;
             right: -0.8em;
             max-width: 55em;
-            background: url("../img/showbg.png") 0 0 no-repeat / 100% 100%;
+            background: url("../img/showbg.png") 0 0 no-repeat;
+            background-size: 100% 100%;
         }
 
         &:before {

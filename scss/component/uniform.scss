@@ -1,9 +1,11 @@
 .uniform {
-    background: url("../img/uniformbg.png") top 30.2em center no-repeat / 148%;
+    background: url("../img/uniformbg.png") top 30.2em center no-repeat;
+    background-size: 148%;
     padding: 6.2em 0 3.9em;
 
     @media (min-width: 768px) {
-        background: url("../img/uniformbg.png") bottom center no-repeat / 101%;
+        background: url("../img/uniformbg.png") bottom center no-repeat;
+        background-size: 101%;
         padding: 7em 0 7.2em;
     }
 
@@ -60,7 +62,8 @@
                 top: 0;
                 right: 0;
                 bottom: 0;
-                background: url("../img/iniformItem.png") 0 0 no-repeat / 100% 100%;
+                background: url("../img/iniformItem.png") 0 0 no-repeat;
+                background-size: 100% 100%;
             }
             @media (min-width: 768px) {
                 $carSize: 3em;

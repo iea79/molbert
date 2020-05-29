@@ -77,14 +77,16 @@
     }
 
     &__other {
-        background: url("../img/estimateOther-mob.png") 0 0 no-repeat / 100% 100%;
+        background: url("../img/estimateOther-mob.png") 0 0 no-repeat;
+        background-size: 100% 100%;
         box-shadow: 0 0.813em 1.75em 0.75em rgba(40, 40, 40, 0.04), 0 0 7.063em 1.25em rgba(255, 255, 255, 0.1);
         padding: 3.1em 3.9em 3.6em;
         border-radius: 0.4em;
         color: #393939;
 
         @media (min-width: 768px) {
-            background: url("../img/estimateOther.png") 0 0 no-repeat / 100% 100%;
+            background: url("../img/estimateOther.png") 0 0 no-repeat;
+            background-size: 100% 100%;
             max-width: 33.5em;
             padding: 3.1em 4.5em 2.2em;
         }
@@ -114,7 +116,8 @@
                 display: block;
                 width: 1.5em;
                 height: 1.5em;
-                background: url("../img/info.png") 0 0 no-repeat / 100%;
+                background: url("../img/info.png") 0 0 no-repeat;
+                background-size: 100%;
 
                 @media (min-width: 768px) {
                     width: 1.438em;
@@ -168,7 +171,8 @@
                 &:before {
                     position: absolute;
                     display: block;
-                    background: url("../img/estimateLine.png") 0 0 no-repeat / 100%;
+                    background: url("../img/estimateLine.png") 0 0 no-repeat;
+                    background-size: 100%;
                     width: 5em;
                     height: 8em;
                 }
@@ -288,7 +292,8 @@
                 line-height: 1.8;
 
                 @media (min-width: 768px) {
-                    background: url("../img/banket.png") 0 0 no-repeat / 100% 100%;
+                    background: url("../img/banket.png") 0 0 no-repeat;
+                    background-size: 100% 100%;
                     box-shadow: 0 13px 28px 12px rgba(40, 40, 40, 0.04), 0 0 113px 20px rgba(255, 255, 255, 0.1);
                 }
 

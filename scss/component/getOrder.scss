@@ -54,7 +54,8 @@
                             height: 3.563em;
                             right: 0.8em;
                             bottom: -0.4em;
-                            background: url("../img/getOrderLine1.png") 0 0 no-repeat / 100%;
+                            background: url("../img/getOrderLine1.png") 0 0 no-repeat;
+                            background-size: 100%;
                         }
                     }
                 }
@@ -78,7 +79,8 @@
                             height: 2.813em;
                             top: 1.6em;
                             right: 93%;
-                            background: url("../img/getOrderLine2.png") 0 0 no-repeat / 100%;
+                            background: url("../img/getOrderLine2.png") 0 0 no-repeat;
+                            background-size: 100%;
                         }
                     }
                 }
@@ -141,12 +143,14 @@
         }
 
         .form {
-            background: url("../img/twoHourform-mob.png") 0 0 no-repeat / 100% 100%;
+            background: url("../img/twoHourform-mob.png") 0 0 no-repeat;
+            background-size: 100% 100%;
             position: relative;
             margin: 0 -1.3em;
 
             @media (min-width: 768px) {
-                background: url("../img/twoHourform.png") 0 0 no-repeat / 100% 100%;
+                background: url("../img/twoHourform.png") 0 0 no-repeat;
+                background-size: 100% 100%;
                 right: -4.2em;
                 margin: 0;
 

@@ -96,7 +96,8 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: url("../img/fullServItem.png") 0 0 no-repeat / 100% 100%;
+                background: url("../img/fullServItem.png") 0 0 no-repeat;
+                background-size: 100% 100%;
                 box-shadow: 0 0.813em 1.75em 0.75em rgba(40, 40, 40, 0.04), 0 0 7.063em 1.25em rgba(255, 255, 255, 0.1);
             }
         }
@@ -135,7 +136,8 @@
     }
 
     &__form {
-        background: url("../img/twoHourform-mob.png") 0 0 no-repeat / 100% 100%;
+        background: url("../img/twoHourform-mob.png") 0 0 no-repeat;
+        background-size: 100% 100%;
         box-shadow: 0 0.813em 1.75em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.25em 0.063em rgba(255, 255, 255, 0.24);
         margin: 0 -1.3em -1.3em;
         position: relative;
@@ -148,7 +150,8 @@
             max-width: 53.5em;
             left: -1.5em;
             display: flex;
-            background: url("../img/fullServForm.png") 0 0 no-repeat / 100% 100%;
+            background: url("../img/fullServForm.png") 0 0 no-repeat;
+            background-size: 100% 100%;
             box-shadow: 0 0.813em 1.75em 0.75em rgba(40, 40, 40, 0.04), 0 0 1.25em 0.063em rgba(255, 255, 255, 0.24);
 
         }
